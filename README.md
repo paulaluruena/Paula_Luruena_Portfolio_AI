@@ -2,7 +2,7 @@
 
 A portfolio for **user research, consumer insights, and societal-impact research roles at companies building AI**. It uses all of Paula's background (research lab, applied behavior work, clinical observation, crisis support, bilingual community work, and business roles) and gives the emphasis to how people use, trust, and are changed by AI.
 
-Website: https://paulaluruena.github.io/Paula_Luruena_Portfolio_AIxPeople/
+Website: https://paulaluruena.github.io/Paula_Luruena_Portfolio_AI/
 
 ## What is on it
 
