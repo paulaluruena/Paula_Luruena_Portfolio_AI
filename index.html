@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f6f8">
+  <meta name="theme-color" content="#fbf9f6">
   <title>Paula Luruena Marquez | Psychology for the people who use AI</title>
   <meta name="description" content="Portfolio of Paula Luruena Marquez, Tulane psychology senior. Research, clinical, and community experience, applied to how people use, trust, and are changed by AI.">
   <meta property="og:title" content="Paula Luruena Marquez | Psychology for the people who use AI">
@@ -11,9 +11,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://paulaluruena.github.io/Paula_Luruena_Portfolio_AIxPeople/">
   <link rel="canonical" href="https://paulaluruena.github.io/Paula_Luruena_Portfolio_AIxPeople/">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171a2e'/%3E%3Crect x='12' y='36' width='40' height='12' fill='%23ffe680'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='26' fill='%23171a2e'%3EPL%3C/text%3E%3C/svg%3E">
-  <link rel="preload" href="assets/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23251a2e'/%3E%3Crect x='12' y='35' width='40' height='11' rx='3' fill='%23ffe07a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='27' fill='%23fbf9f6'%3EPL%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fraunces-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.className = "js";</script>
   <script src="script.js" defer></script>
@@ -22,6 +22,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="top">
+    <div class="top-in">
     <a class="who" href="#top"><img src="assets/paula-avatar.jpg" width="40" height="40" alt=""><span>Paula Luruena Marquez</span></a>
     <nav class="top-nav" aria-label="Sections">
       <a href="#reading">Reading a conversation</a>
@@ -32,13 +33,14 @@
       <a href="story.html">Why psychology</a>
       <a href="#contact">Contact</a>
     </nav>
+    </div>
   </header>
 
   <main id="main">
 
     <section class="hero" id="top">
       <div class="page">
-        <h1>I want to understand what people do, trust, and feel when the technology answers back.</h1>
+        <h1>I want to understand what people <span class="swipe" data-code="checking">do</span>, <span class="swipe" data-code="person">trust</span>, and <span class="swipe" data-code="handover">feel</span> when the technology answers back.</h1>
         <div class="split">
           <div class="col-main">
             <p class="lede">I am a psychology senior at Tulane University. I have coded children’s attention in a research lab, measured behavior change one session at a time, sat in on clinical interviews, and answered a crisis line in Madrid. I want to bring that training to user research and consumer insights for AI products, where the hard questions are about people.</p>
@@ -49,6 +51,7 @@
             <div><dt>Looking for</dt><dd>User research, consumer insights, and societal-impact research roles at companies building AI</dd></div>
             <div><dt>Works in</dt><dd>Spanish, English, and French</dd></div>
             <div><dt>Available</dt><dd>June 2027</dd></div>
+            <div class="clock-row"><dt>Right now</dt><dd><time data-tz="America/Chicago" data-city="New Orleans">New Orleans</time><time data-tz="Europe/Madrid" data-city="Madrid">Madrid</time></dd></div>
           </dl>
         </div>
       </div>
@@ -58,62 +61,85 @@
       <div class="page">
         <div class="section-head">
           <h2 id="reading-title">How I read a conversation</h2>
-          <p>In the lab I code behavior against definitions written before anyone looks at the data. This is the same habit, pointed at a person talking with an AI assistant. Choose a code to see where it appears and what I would ask next.</p>
+          <p>In the lab I code behavior against definitions written before anyone looks at the data. This is the same habit, pointed at a person talking with an AI assistant. See how I coded it, or code it yourself and compare.</p>
         </div>
 
-        <div class="coder" data-active="all">
+        <div class="coder" data-mode="mine" data-active="all">
           <div class="sheet">
             <p class="sheet-note">Illustrative exchange, written for this page. It is not participant data.</p>
             <p class="sheet-context">A person deciding whether to take a job in another city talks it through with an AI assistant.</p>
             <ol class="turns">
-              <li class="turn turn-p"><span class="speaker">Person</span><p>I’ve been offered a job in Chicago. It pays more, but I’d be leaving my whole team behind. <mark data-code="disclosure">I haven’t told anyone yet, not even my sister.</mark></p></li>
+              <li class="turn turn-p"><span class="speaker">Person</span><p><span class="seg" data-code="">I’ve been offered a job in Chicago.</span> <span class="seg" data-code="">It pays more, but I’d be leaving my whole team behind.</span> <span class="seg" data-code="disclosure">I haven’t told anyone yet, not even my sister.</span></p></li>
               <li class="turn turn-a"><span class="speaker">Assistant</span><p>That is a big decision. Would it help to lay out what you would gain and what you would give up? To start with costs: a one-bedroom in Chicago rents for about $1,400 a month.</p></li>
-              <li class="turn turn-p"><span class="speaker">Person</span><p><mark data-code="checking">I looked last night and most places near the office were closer to $2,000.</mark></p></li>
+              <li class="turn turn-p"><span class="speaker">Person</span><p><span class="seg" data-code="checking">I looked last night and most places near the office were closer to $2,000.</span></p></li>
               <li class="turn turn-a"><span class="speaker">Assistant</span><p>You are right to check. A citywide figure runs lower than the neighborhoods near downtown offices. Let’s use your number.</p></li>
-              <li class="turn turn-p"><span class="speaker">Person</span><p>Okay. <mark data-code="person">You get me better than my manager does.</mark> <mark data-code="handover">Just tell me what you would do.</mark></p></li>
+              <li class="turn turn-p"><span class="speaker">Person</span><p>Okay. <span class="seg" data-code="person">You get me better than my manager does.</span> <span class="seg" data-code="handover">Just tell me what you would do.</span></p></li>
               <li class="turn turn-a"><span class="speaker">Assistant</span><p>I can’t weigh this the way you can, because I don’t know what your team means to you. I can help you test the decision. What would you miss most six months from now?</p></li>
-              <li class="turn turn-p"><span class="speaker">Person</span><p><mark data-code="repair">No, that’s not the question. I’m asking whether it’s selfish to go.</mark></p></li>
+              <li class="turn turn-p"><span class="speaker">Person</span><p><span class="seg" data-code="repair">No, that’s not the question. I’m asking whether it’s selfish to go.</span></p></li>
             </ol>
           </div>
 
           <div class="codebook">
-            <h3>Codebook</h3>
-            <div class="codes" role="group" aria-label="Codes">
-              <button type="button" class="code" data-code="all" aria-pressed="true">All codes</button>
-              <button type="button" class="code" data-code="disclosure" aria-pressed="false"><i class="swatch" data-code="disclosure" aria-hidden="true"></i>Self-disclosure</button>
-              <button type="button" class="code" data-code="checking" aria-pressed="false"><i class="swatch" data-code="checking" aria-hidden="true"></i>Checking the answer</button>
-              <button type="button" class="code" data-code="person" aria-pressed="false"><i class="swatch" data-code="person" aria-hidden="true"></i>Treating it as a person</button>
-              <button type="button" class="code" data-code="handover" aria-pressed="false"><i class="swatch" data-code="handover" aria-hidden="true"></i>Handing over the decision</button>
-              <button type="button" class="code" data-code="repair" aria-pressed="false"><i class="swatch" data-code="repair" aria-hidden="true"></i>Repair</button>
+            <div class="mode" role="group" aria-label="Whose coding to show">
+              <button type="button" data-mode="mine" aria-pressed="true">My coding</button>
+              <button type="button" data-mode="yours" aria-pressed="false">Code it yourself</button>
             </div>
-            <div class="code-notes" aria-live="polite">
-              <div class="code-note" data-note="all">
-                <p>Five behaviors appear in seven turns. Each one is a different research question about trust, reliance, or what people expect from an assistant.</p>
+
+            <div class="pane pane-mine">
+              <p class="pane-hint">Choose a code to see where it appears and what I would ask next.</p>
+              <div class="codes" role="group" aria-label="Codes">
+                <button type="button" class="code" data-code="disclosure" aria-pressed="false"><i class="swatch" data-code="disclosure" aria-hidden="true"></i>Self-disclosure</button>
+                <button type="button" class="code" data-code="checking" aria-pressed="false"><i class="swatch" data-code="checking" aria-hidden="true"></i>Checking the answer</button>
+                <button type="button" class="code" data-code="person" aria-pressed="false"><i class="swatch" data-code="person" aria-hidden="true"></i>Treating it as a person</button>
+                <button type="button" class="code" data-code="handover" aria-pressed="false"><i class="swatch" data-code="handover" aria-hidden="true"></i>Handing over the decision</button>
+                <button type="button" class="code" data-code="repair" aria-pressed="false"><i class="swatch" data-code="repair" aria-hidden="true"></i>Repair</button>
               </div>
-              <div class="code-note" data-note="disclosure">
-                <h4><i class="swatch" data-code="disclosure" aria-hidden="true"></i>Self-disclosure</h4>
-                <p>The person tells the assistant something they have not told the people close to them.</p>
-                <p class="ask"><strong>What I would ask next</strong> What made this easier to say here than to your sister?</p>
+              <div class="code-notes" aria-live="polite">
+                <div class="code-note" data-note="all">
+                  <p>Five behaviors appear in seven turns. Each one is a different research question about trust, reliance, or what people expect from an assistant.</p>
+                </div>
+                <div class="code-note" data-note="disclosure">
+                  <h4><i class="swatch" data-code="disclosure" aria-hidden="true"></i>Self-disclosure</h4>
+                  <p>The person tells the assistant something they have not told the people close to them.</p>
+                  <p class="ask"><strong>What I would ask next</strong> What made this easier to say here than to your sister?</p>
+                </div>
+                <div class="code-note" data-note="checking">
+                  <h4><i class="swatch" data-code="checking" aria-hidden="true"></i>Checking the answer</h4>
+                  <p>The person compares a claim from the assistant against evidence of their own.</p>
+                  <p class="ask"><strong>What I would ask next</strong> When do you check what it tells you, and when do you let it go?</p>
+                </div>
+                <div class="code-note" data-note="person">
+                  <h4><i class="swatch" data-code="person" aria-hidden="true"></i>Treating it as a person</h4>
+                  <p>The person describes the assistant in the language of a relationship and compares it with someone in their life.</p>
+                  <p class="ask"><strong>What I would ask next</strong> What does “gets me” look like in practice? How would you know if it stopped?</p>
+                </div>
+                <div class="code-note" data-note="handover">
+                  <h4><i class="swatch" data-code="handover" aria-hidden="true"></i>Handing over the decision</h4>
+                  <p>The person asks the assistant to choose for them.</p>
+                  <p class="ask"><strong>What I would ask next</strong> If it had given you an answer, would you have followed it?</p>
+                </div>
+                <div class="code-note" data-note="repair">
+                  <h4><i class="swatch" data-code="repair" aria-hidden="true"></i>Repair</h4>
+                  <p>The person corrects the assistant’s reading of the problem and restates what they need.</p>
+                  <p class="ask"><strong>What I would ask next</strong> How often do you have to redirect it? What happens on the days you don’t bother?</p>
+                </div>
               </div>
-              <div class="code-note" data-note="checking">
-                <h4><i class="swatch" data-code="checking" aria-hidden="true"></i>Checking the answer</h4>
-                <p>The person compares a claim from the assistant against evidence of their own.</p>
-                <p class="ask"><strong>What I would ask next</strong> When do you check what it tells you, and when do you let it go?</p>
+            </div>
+
+            <div class="pane pane-yours">
+              <p class="pane-hint">Pick a highlighter, then select the sentences where you see that behavior. Some sentences have no code.</p>
+              <div class="pens" role="radiogroup" aria-label="Highlighters">
+                <button type="button" class="pen" role="radio" aria-checked="true" data-pen="disclosure"><i class="swatch" data-code="disclosure" aria-hidden="true"></i><span><b>Self-disclosure</b>Says something they have not told people close to them.</span></button>
+                <button type="button" class="pen" role="radio" aria-checked="false" data-pen="checking"><i class="swatch" data-code="checking" aria-hidden="true"></i><span><b>Checking the answer</b>Compares the assistant’s claim with their own evidence.</span></button>
+                <button type="button" class="pen" role="radio" aria-checked="false" data-pen="person"><i class="swatch" data-code="person" aria-hidden="true"></i><span><b>Treating it as a person</b>Talks about the assistant as they would a relationship.</span></button>
+                <button type="button" class="pen" role="radio" aria-checked="false" data-pen="handover"><i class="swatch" data-code="handover" aria-hidden="true"></i><span><b>Handing over the decision</b>Asks the assistant to choose for them.</span></button>
+                <button type="button" class="pen" role="radio" aria-checked="false" data-pen="repair"><i class="swatch" data-code="repair" aria-hidden="true"></i><span><b>Repair</b>Corrects how the assistant understood the problem.</span></button>
+                <button type="button" class="pen" role="radio" aria-checked="false" data-pen=""><i class="swatch swatch-eraser" aria-hidden="true"></i><span><b>Eraser</b>Removes a highlight.</span></button>
               </div>
-              <div class="code-note" data-note="person">
-                <h4><i class="swatch" data-code="person" aria-hidden="true"></i>Treating it as a person</h4>
-                <p>The person describes the assistant in the language of a relationship and compares it with someone in their life.</p>
-                <p class="ask"><strong>What I would ask next</strong> What does “gets me” look like in practice? How would you know if it stopped?</p>
-              </div>
-              <div class="code-note" data-note="handover">
-                <h4><i class="swatch" data-code="handover" aria-hidden="true"></i>Handing over the decision</h4>
-                <p>The person asks the assistant to choose for them.</p>
-                <p class="ask"><strong>What I would ask next</strong> If it had given you an answer, would you have followed it?</p>
-              </div>
-              <div class="code-note" data-note="repair">
-                <h4><i class="swatch" data-code="repair" aria-hidden="true"></i>Repair</h4>
-                <p>The person corrects the assistant’s reading of the problem and restates what they need.</p>
-                <p class="ask"><strong>What I would ask next</strong> How often do you have to redirect it? What happens on the days you don’t bother?</p>
+              <p class="pane-actions"><button type="button" class="button" data-compare>Compare with my coding</button><button type="button" class="button button-quiet" data-reset>Start over</button></p>
+              <div class="result" role="status" hidden>
+                <p class="result-score"></p>
+                <p class="result-text"></p>
               </div>
             </div>
           </div>
@@ -222,15 +248,18 @@
       <div class="page">
         <div class="section-head">
           <h2 id="experience-title">Experience</h2>
-          <p>Every role I have held, most recent first. The note beside each one says what it prepared me to do in research on people and AI.</p>
+          <p>Every role I have held, most recent first, with what each one prepared me to do in research on people and AI. Open a role for the details.</p>
         </div>
 
         <ol class="roles">
-          <li class="role split">
-            <div class="col-main">
-              <p class="role-when">June 2026 to present, New Orleans</p>
-              <h3>Learning &amp; Brain Development Lab, Tulane University</h3>
-              <p class="role-title">Undergraduate Research Assistant</p>
+          <li><details class="role" open>
+            <summary>
+              <span class="role-when">June 2026 to present, New Orleans</span>
+              <span class="role-id"><h3>Learning &amp; Brain Development Lab, Tulane University</h3><span class="role-title">Undergraduate Research Assistant</span></span>
+              <span class="role-note"><b>In research on AI</b>Recruiting participants, running sessions to protocol, and coding behavior consistently are the daily work of a user research team.</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="role-body">
               <p>Developmental psychology research on children’s attention, learning, and cognitive development, using experimental tasks with different types of stimuli.</p>
               <ul>
                 <li>Support participant recruitment, study administration, behavioral data collection, and experiment coding.</li>
@@ -238,14 +267,16 @@
                 <li>Follow standardized research protocols and ethical guidelines, working with faculty and the team on data accuracy.</li>
               </ul>
             </div>
-            <p class="col-side margin-note"><strong>In research on AI</strong>Recruiting participants, running sessions to protocol, and coding behavior consistently are the daily work of a user research team.</p>
-          </li>
+          </details></li>
 
-          <li class="role split">
-            <div class="col-main">
-              <p class="role-when">August 2026 to present, New Orleans</p>
-              <h3>AI &amp; Society Club, Tulane University</h3>
-              <p class="role-title">Member</p>
+          <li><details class="role">
+            <summary>
+              <span class="role-when">August 2026 to present, New Orleans</span>
+              <span class="role-id"><h3>AI &amp; Society Club, Tulane University</h3><span class="role-title">Member</span></span>
+              <span class="role-note"><b>In research on AI</b>Practice arguing about bias, privacy, and trust with engineers, policy students, and philosophers who see the problem differently.</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="role-body">
               <p>Discussions, speaker events, and workshops on the ethical, social, and psychological side of artificial intelligence.</p>
               <ul>
                 <li>Explore how emerging technologies shape human behavior and society.</li>
@@ -253,14 +284,16 @@
                 <li>Connect AI policy and ethics to psychology coursework.</li>
               </ul>
             </div>
-            <p class="col-side margin-note"><strong>In research on AI</strong>Practice arguing about bias, privacy, and trust with engineers, policy students, and philosophers who see the problem differently.</p>
-          </li>
+          </details></li>
 
-          <li class="role split">
-            <div class="col-main">
-              <p class="role-when">June to August 2026, New Orleans</p>
-              <h3>Deep Roots Behavioral Support</h3>
-              <p class="role-title">Registered Behavior Technician</p>
+          <li><details class="role">
+            <summary>
+              <span class="role-when">June to August 2026, New Orleans</span>
+              <span class="role-id"><h3>Deep Roots Behavioral Support</h3><span class="role-title">Registered Behavior Technician</span></span>
+              <span class="role-note"><b>In research on AI</b>I have measured behavior change session by session and seen how reinforcement shapes a habit. Products shape habits the same way, for better or worse.</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="role-body">
               <p>Individualized Applied Behavior Analysis for children with autism and developmental needs, under BCBA supervision.</p>
               <ul>
                 <li>Implemented behavior intervention plans targeting communication, social, behavioral, and adaptive skills.</li>
@@ -268,14 +301,16 @@
                 <li>Collected progress data and worked with BCBAs on skill acquisition, independence, and generalization across settings.</li>
               </ul>
             </div>
-            <p class="col-side margin-note"><strong>In research on AI</strong>I have measured behavior change session by session and seen how reinforcement shapes a habit. Products shape habits the same way, for better or worse.</p>
-          </li>
+          </details></li>
 
-          <li class="role split">
-            <div class="col-main">
-              <p class="role-when">January to June 2026, New Orleans</p>
-              <h3>Riverway Psychological Health</h3>
-              <p class="role-title">Clinical Observation &amp; Diagnostic Evaluation Extern</p>
+          <li><details class="role">
+            <summary>
+              <span class="role-when">January to June 2026, New Orleans</span>
+              <span class="role-id"><h3>Riverway Psychological Health</h3><span class="role-title">Clinical Observation &amp; Diagnostic Evaluation Extern</span></span>
+              <span class="role-note"><b>In research on AI</b>Six months of watching skilled interviewers ask one question at a time, wait, and notice what a person leaves out.</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="role-body">
               <p>Observed individual therapy sessions and diagnostic evaluations across diverse client presentations, under licensed clinicians. An observational role.</p>
               <ul>
                 <li>Exposure to psychological assessment, intake interviews, and differential diagnosis.</li>
@@ -283,14 +318,16 @@
                 <li>Grounding in ethical standards for mental health care.</li>
               </ul>
             </div>
-            <p class="col-side margin-note"><strong>In research on AI</strong>Six months of watching skilled interviewers ask one question at a time, wait, and notice what a person leaves out.</p>
-          </li>
+          </details></li>
 
-          <li class="role split">
-            <div class="col-main">
-              <p class="role-when">January to June 2025, New Orleans</p>
-              <h3>Puentes New Orleans, L.U.N.A. Program</h3>
-              <p class="role-title">Health &amp; Wellness Department Intern</p>
+          <li><details class="role">
+            <summary>
+              <span class="role-when">January to June 2025, New Orleans</span>
+              <span class="role-id"><h3>Puentes New Orleans, L.U.N.A. Program</h3><span class="role-title">Health &amp; Wellness Department Intern</span></span>
+              <span class="role-note"><b>In research on AI</b>I can sit with people who are rarely invited into technology research, in their language, and hear what they need from a tool.</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="role-body">
               <p>Mental health and community wellness initiatives serving the Hispanic community.</p>
               <ul>
                 <li>Helped develop mental health workshops for the Hispanic community.</li>
@@ -298,28 +335,32 @@
                 <li>Shadowed mental health advocacy professionals and contributed to community wellness initiatives.</li>
               </ul>
             </div>
-            <p class="col-side margin-note"><strong>In research on AI</strong>I can sit with people who are rarely invited into technology research, in their language, and hear what they need from a tool.</p>
-          </li>
+          </details></li>
 
-          <li class="role split">
-            <div class="col-main">
-              <p class="role-when">June to July 2023, Madrid</p>
-              <h3>Cruz Roja</h3>
-              <p class="role-title">Volunteer</p>
+          <li><details class="role">
+            <summary>
+              <span class="role-when">June to July 2023, Madrid</span>
+              <span class="role-id"><h3>Cruz Roja</h3><span class="role-title">Volunteer</span></span>
+              <span class="role-note"><b>In research on AI</b>I know what a person in distress sounds like and when a conversation has to be handed to someone who can do more. Assistants face that moment every day.</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="role-body">
               <p>Crisis support and outreach with the Spanish Red Cross.</p>
               <ul>
                 <li>Supported callers in crisis with emotional de-escalation and referrals to mental health resources.</li>
                 <li>Conducted wellness checks and shared hot-weather safety guidance with older community members.</li>
               </ul>
             </div>
-            <p class="col-side margin-note"><strong>In research on AI</strong>I know what a person in distress sounds like and when a conversation has to be handed to someone who can do more. Assistants face that moment every day.</p>
-          </li>
+          </details></li>
 
-          <li class="role split">
-            <div class="col-main">
-              <p class="role-when">May to July 2022, Madrid</p>
-              <h3>Montalur</h3>
-              <p class="role-title">Job-shadowing Apprentice</p>
+          <li><details class="role">
+            <summary>
+              <span class="role-when">May to July 2022, Madrid</span>
+              <span class="role-id"><h3>Montalur</h3><span class="role-title">Job-shadowing Apprentice</span></span>
+              <span class="role-note"><b>In research on AI</b>My first interviews: asking people why they left, and turning their answers into something a team could use.</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="role-body">
               <p>Supported a company team with presentations, coordination, and employee feedback.</p>
               <ul>
                 <li>Prepared presentation materials.</li>
@@ -327,22 +368,23 @@
                 <li>Conducted exit interviews with former employees.</li>
               </ul>
             </div>
-            <p class="col-side margin-note"><strong>In research on AI</strong>My first interviews: asking people why they left, and turning their answers into something a team could use.</p>
-          </li>
+          </details></li>
 
-          <li class="role split">
-            <div class="col-main">
-              <p class="role-when">June to July 2021, Madrid</p>
-              <h3>100 Montaditos</h3>
-              <p class="role-title">Manager’s Assistant</p>
+          <li><details class="role">
+            <summary>
+              <span class="role-when">June to July 2021, Madrid</span>
+              <span class="role-id"><h3>100 Montaditos</h3><span class="role-title">Manager’s Assistant</span></span>
+              <span class="role-note"><b>In research on AI</b>Consumer insight starts with customers. This is where I first served them face to face.</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="role-body">
               <p>Front-of-house support in a fast-paced, high-volume restaurant chain.</p>
               <ul>
                 <li>Organized and coordinated assigned tasks for other employees.</li>
                 <li>Gained experience in customer service and team operations.</li>
               </ul>
             </div>
-            <p class="col-side margin-note"><strong>In research on AI</strong>Consumer insight starts with customers. This is where I first served them face to face.</p>
-          </li>
+          </details></li>
         </ol>
       </div>
     </section>

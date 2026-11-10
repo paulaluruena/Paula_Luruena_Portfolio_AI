@@ -4,24 +4,154 @@ document.documentElement.classList.add("js");
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
-// Codebook: choose a code to see where it appears in the conversation
+// Top bar: hairline once the page scrolls, and mark the section in view
+const topBar = document.querySelector(".top");
+if (topBar) {
+  const stuck = () => topBar.classList.toggle("is-stuck", window.scrollY > 8);
+  window.addEventListener("scroll", stuck, { passive: true });
+  stuck();
+  const links = Array.from(topBar.querySelectorAll('.top-nav a[href^="#"]'));
+  const byId = new Map(links.map((a) => [a.getAttribute("href").slice(1), a]));
+  if (byId.size && "IntersectionObserver" in window) {
+    const seen = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          links.forEach((a) => a.classList.remove("is-current"));
+          byId.get(e.target.id).classList.add("is-current");
+        }),
+      { rootMargin: "-35% 0px -60% 0px" }
+    );
+    byId.forEach((_, id) => {
+      const el = document.getElementById(id);
+      if (el) seen.observe(el);
+    });
+  }
+}
+
+// Live clocks for New Orleans and Madrid
+const clocks = document.querySelectorAll("time[data-tz]");
+if (clocks.length) {
+  const tick = () =>
+    clocks.forEach((t) => {
+      const now = new Date().toLocaleTimeString("en-US", { timeZone: t.dataset.tz, hour: "numeric", minute: "2-digit" });
+      t.textContent = `${now} in ${t.dataset.city}`;
+    });
+  tick();
+  setInterval(tick, 20000);
+}
+
+// Coded conversation
 const coder = document.querySelector(".coder");
 if (coder) {
-  const buttons = coder.querySelectorAll(".code");
+  const segs = Array.from(coder.querySelectorAll(".seg"));
+  const codeButtons = coder.querySelectorAll(".code");
+  const modeButtons = coder.querySelectorAll(".mode button");
+  const pens = Array.from(coder.querySelectorAll(".pen"));
+  const result = coder.querySelector(".result");
+  const names = {
+    disclosure: "Self-disclosure",
+    checking: "Checking the answer",
+    person: "Treating it as a person",
+    handover: "Handing over the decision",
+    repair: "Repair",
+    "": "No code",
+  };
+  let pen = "disclosure";
+
   const choose = (code) => {
     coder.dataset.active = code;
-    buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.code === code)));
+    codeButtons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.code === code)));
   };
-  buttons.forEach((b) =>
-    b.addEventListener("click", () => {
-      const already = b.getAttribute("aria-pressed") === "true";
-      choose(already ? "all" : b.dataset.code);
-    })
+  codeButtons.forEach((b) =>
+    b.addEventListener("click", () => choose(b.getAttribute("aria-pressed") === "true" ? "all" : b.dataset.code))
   );
-  // Highlights in the conversation are clickable too
-  coder.querySelectorAll("mark").forEach((m) => {
-    m.style.cursor = "pointer";
-    m.addEventListener("click", () => choose(coder.dataset.active === m.dataset.code ? "all" : m.dataset.code));
+
+  const clearVerdicts = () => {
+    segs.forEach((s) => {
+      s.removeAttribute("data-verdict");
+      s.classList.remove("agree", "differ");
+    });
+    result.hidden = true;
+  };
+
+  const setMode = (mode) => {
+    coder.dataset.mode = mode;
+    modeButtons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.mode === mode)));
+    segs.forEach((s) => {
+      const active = mode === "yours";
+      if (active) {
+        s.setAttribute("role", "button");
+        s.tabIndex = 0;
+      } else {
+        s.removeAttribute("role");
+        s.removeAttribute("tabindex");
+      }
+    });
+    if (mode === "mine") choose("all");
+  };
+  modeButtons.forEach((b) => b.addEventListener("click", () => setMode(b.dataset.mode)));
+
+  const setPen = (button) => {
+    pen = button.dataset.pen;
+    pens.forEach((p) => p.setAttribute("aria-checked", String(p === button)));
+  };
+  pens.forEach((p, i) => {
+    p.addEventListener("click", () => setPen(p));
+    p.addEventListener("keydown", (e) => {
+      const step = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+      if (!step) return;
+      e.preventDefault();
+      const next = pens[(i + step + pens.length) % pens.length];
+      setPen(next);
+      next.focus();
+    });
+  });
+
+  const paint = (seg) => {
+    if (coder.dataset.mode === "mine") {
+      if (seg.dataset.code) choose(coder.dataset.active === seg.dataset.code ? "all" : seg.dataset.code);
+      return;
+    }
+    clearVerdicts();
+    if (!pen || seg.dataset.guess === pen) seg.removeAttribute("data-guess");
+    else seg.dataset.guess = pen;
+  };
+  segs.forEach((s) => {
+    s.addEventListener("click", () => paint(s));
+    s.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        paint(s);
+      }
+    });
+  });
+
+  coder.querySelector("[data-compare]").addEventListener("click", () => {
+    let agreed = 0;
+    segs.forEach((s) => {
+      const mine = s.dataset.code;
+      const yours = s.dataset.guess || "";
+      const same = mine === yours;
+      if (same) agreed += 1;
+      s.classList.toggle("agree", same);
+      s.classList.toggle("differ", !same);
+      if (same && mine) s.dataset.verdict = "We agree";
+      else if (!same) s.dataset.verdict = `Mine: ${names[mine]}`;
+      else s.removeAttribute("data-verdict");
+    });
+    const total = segs.length;
+    result.querySelector(".result-score").textContent = `We agreed on ${agreed} of ${total} sentences.`;
+    result.querySelector(".result-text").textContent =
+      agreed === total
+        ? "Full agreement. Two coders matching like this is what makes coded data worth trusting."
+        : "Where we differ is the useful part. When two coders disagree, the fix is usually a sharper definition, and the codebook gets better.";
+    result.hidden = false;
+  });
+
+  coder.querySelector("[data-reset]").addEventListener("click", () => {
+    segs.forEach((s) => s.removeAttribute("data-guess"));
+    clearVerdicts();
   });
 }
 
