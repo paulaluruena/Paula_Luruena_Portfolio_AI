@@ -35,7 +35,7 @@ if (clocks.length) {
   const tick = () =>
     clocks.forEach((t) => {
       const now = new Date().toLocaleTimeString("en-US", { timeZone: t.dataset.tz, hour: "numeric", minute: "2-digit" });
-      t.textContent = `${now} in ${t.dataset.city}`;
+      t.textContent = now;
     });
   tick();
   setInterval(tick, 20000);
