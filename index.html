@@ -26,11 +26,11 @@
     <a class="who" href="#top"><img src="assets/paula-avatar.jpg" width="40" height="40" alt=""><span><span class="who-name">Paula Luruena Marquez</span><span class="who-role">Psychology, Tulane University</span></span></a>
       <p class="track-label"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="m12.8 7.2-1.7 3.9-3.9 1.7 1.7-3.9z"/></svg><span><strong>Psychology</strong><span>Applied to people and AI</span></span></p>
     <nav class="top-nav" aria-label="Sections">
+      <a href="#background">Background</a>
+      <a href="#experience">Experience</a>
+      <a href="#built">Built with AI</a>
       <a href="#reading">Reading a conversation</a>
       <a href="#proposals">Study proposals</a>
-      <a href="#built">Built with AI</a>
-      <a href="#experience">Experience</a>
-      <a href="#background">Background</a>
       <a href="story.html">Why psychology</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -51,7 +51,7 @@
         <div class="split">
           <div class="col-main">
             <p class="lede">I am a psychology senior at Tulane University. I have coded children’s attention in a research lab, measured behavior change one session at a time, sat in on clinical interviews, and answered a crisis line in Madrid. I want to bring that training to user research and consumer insights for AI products, where the hard questions are about people.</p>
-            <p class="actions"><a class="button" href="#reading">See how I read a conversation</a><a class="button button-quiet" href="assets/Paula-Luruena-Marquez-Resume.pdf" download>Download résumé</a></p>
+            <p class="actions"><a class="button" href="#built">See what I have built with AI</a><a class="button button-quiet" href="assets/Paula-Luruena-Marquez-Resume.pdf" download>Download résumé</a></p>
           </div>
           <dl class="col-side facts">
             <div><dt>Studying</dt><dd>B.S. Psychology, Tulane University, May 2027</dd></div>
@@ -63,187 +63,52 @@
       </div>
     </section>
 
-    <section class="section" id="reading" aria-labelledby="reading-title">
+    <section class="section" id="background" aria-labelledby="background-title">
       <div class="page">
         <div class="section-head">
-          <h2 id="reading-title">How I read a conversation</h2>
-          <p>In the lab I code behavior against definitions written before anyone looks at the data. This is the same habit, pointed at a person talking with an AI assistant. See how I coded it, or code it yourself and compare.</p>
+          <h2 id="background-title">Background</h2>
+          <p>Education, languages, tools, and the communities I have been part of.</p>
         </div>
-
-        <div class="coder" data-mode="mine" data-active="all">
-          <div class="sheet">
-            <p class="sheet-note">Illustrative exchange, written for this page. It is not participant data.</p>
-            <p class="sheet-context">A person deciding whether to take a job in another city talks it through with an AI assistant.</p>
-            <ol class="turns">
-              <li class="turn turn-p"><span class="speaker">Person</span><p><span class="seg" data-code="">I’ve been offered a job in Chicago.</span> <span class="seg" data-code="">It pays more, but I’d be leaving my whole team behind.</span> <span class="seg" data-code="disclosure">I haven’t told anyone yet, not even my sister.</span></p></li>
-              <li class="turn turn-a"><span class="speaker">Assistant</span><p>That is a big decision. Would it help to lay out what you would gain and what you would give up? To start with costs: a one-bedroom in Chicago rents for about $1,400 a month.</p></li>
-              <li class="turn turn-p"><span class="speaker">Person</span><p><span class="seg" data-code="checking">I looked last night and most places near the office were closer to $2,000.</span></p></li>
-              <li class="turn turn-a"><span class="speaker">Assistant</span><p>You are right to check. A citywide figure runs lower than the neighborhoods near downtown offices. Let’s use your number.</p></li>
-              <li class="turn turn-p"><span class="speaker">Person</span><p>Okay. <span class="seg" data-code="person">You get me better than my manager does.</span> <span class="seg" data-code="handover">Just tell me what you would do.</span></p></li>
-              <li class="turn turn-a"><span class="speaker">Assistant</span><p>I can’t weigh this the way you can, because I don’t know what your team means to you. I can help you test the decision. What would you miss most six months from now?</p></li>
-              <li class="turn turn-p"><span class="speaker">Person</span><p><span class="seg" data-code="repair">No, that’s not the question. I’m asking whether it’s selfish to go.</span></p></li>
-            </ol>
+        <div class="bg-grid">
+          <div class="bg-block">
+            <h3>Education</h3>
+            <dl class="kv">
+              <div><dt>Tulane University</dt><dd>Bachelor of Science in Psychology, expected May 2027. Minors in Strategy, Leadership &amp; Analytics (SLAM) and French Studies.</dd></div>
+              <div><dt>Honors</dt><dd>Psi Chi, the International Honor Society in Psychology, 2025 to present.</dd></div>
+              <div><dt>Mercersburg Academy</dt><dd>High school diploma, May 2023, 4.00 GPA.</dd></div>
+              <div><dt>KUMON</dt><dd>Mathematics self-learning program, Madrid, 2007 to 2019.</dd></div>
+            </dl>
           </div>
-
-          <div class="codebook">
-            <div class="mode" role="group" aria-label="Whose coding to show">
-              <button type="button" data-mode="mine" aria-pressed="true">My coding</button>
-              <button type="button" data-mode="yours" aria-pressed="false">Code it yourself</button>
-            </div>
-
-            <div class="pane pane-mine">
-              <p class="pane-hint">Choose a code to see where it appears and what I would ask next.</p>
-              <div class="codes" role="group" aria-label="Codes">
-                <button type="button" class="code" data-code="disclosure" aria-pressed="false"><i class="swatch" data-code="disclosure" aria-hidden="true"></i>Self-disclosure</button>
-                <button type="button" class="code" data-code="checking" aria-pressed="false"><i class="swatch" data-code="checking" aria-hidden="true"></i>Checking the answer</button>
-                <button type="button" class="code" data-code="person" aria-pressed="false"><i class="swatch" data-code="person" aria-hidden="true"></i>Treating it as a person</button>
-                <button type="button" class="code" data-code="handover" aria-pressed="false"><i class="swatch" data-code="handover" aria-hidden="true"></i>Handing over the decision</button>
-                <button type="button" class="code" data-code="repair" aria-pressed="false"><i class="swatch" data-code="repair" aria-hidden="true"></i>Repair</button>
-              </div>
-              <div class="code-notes" aria-live="polite">
-                <div class="code-note" data-note="all">
-                  <p>Five behaviors appear in seven turns. Each one is a different research question about trust, reliance, or what people expect from an assistant.</p>
-                </div>
-                <div class="code-note" data-note="disclosure">
-                  <h4><i class="swatch" data-code="disclosure" aria-hidden="true"></i>Self-disclosure</h4>
-                  <p>The person tells the assistant something they have not told the people close to them.</p>
-                  <p class="ask"><strong>What I would ask next</strong> What made this easier to say here than to your sister?</p>
-                </div>
-                <div class="code-note" data-note="checking">
-                  <h4><i class="swatch" data-code="checking" aria-hidden="true"></i>Checking the answer</h4>
-                  <p>The person compares a claim from the assistant against evidence of their own.</p>
-                  <p class="ask"><strong>What I would ask next</strong> When do you check what it tells you, and when do you let it go?</p>
-                </div>
-                <div class="code-note" data-note="person">
-                  <h4><i class="swatch" data-code="person" aria-hidden="true"></i>Treating it as a person</h4>
-                  <p>The person describes the assistant in the language of a relationship and compares it with someone in their life.</p>
-                  <p class="ask"><strong>What I would ask next</strong> What does “gets me” look like in practice? How would you know if it stopped?</p>
-                </div>
-                <div class="code-note" data-note="handover">
-                  <h4><i class="swatch" data-code="handover" aria-hidden="true"></i>Handing over the decision</h4>
-                  <p>The person asks the assistant to choose for them.</p>
-                  <p class="ask"><strong>What I would ask next</strong> If it had given you an answer, would you have followed it?</p>
-                </div>
-                <div class="code-note" data-note="repair">
-                  <h4><i class="swatch" data-code="repair" aria-hidden="true"></i>Repair</h4>
-                  <p>The person corrects the assistant’s reading of the problem and restates what they need.</p>
-                  <p class="ask"><strong>What I would ask next</strong> How often do you have to redirect it? What happens on the days you don’t bother?</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="pane pane-yours">
-              <p class="pane-hint">Pick a highlighter, then select the sentences where you see that behavior. Some sentences have no code.</p>
-              <div class="pens" role="radiogroup" aria-label="Highlighters">
-                <button type="button" class="pen" role="radio" aria-checked="true" data-pen="disclosure"><i class="swatch" data-code="disclosure" aria-hidden="true"></i><span><b>Self-disclosure</b>Says something they have not told people close to them.</span></button>
-                <button type="button" class="pen" role="radio" aria-checked="false" data-pen="checking"><i class="swatch" data-code="checking" aria-hidden="true"></i><span><b>Checking the answer</b>Compares the assistant’s claim with their own evidence.</span></button>
-                <button type="button" class="pen" role="radio" aria-checked="false" data-pen="person"><i class="swatch" data-code="person" aria-hidden="true"></i><span><b>Treating it as a person</b>Talks about the assistant as they would a relationship.</span></button>
-                <button type="button" class="pen" role="radio" aria-checked="false" data-pen="handover"><i class="swatch" data-code="handover" aria-hidden="true"></i><span><b>Handing over the decision</b>Asks the assistant to choose for them.</span></button>
-                <button type="button" class="pen" role="radio" aria-checked="false" data-pen="repair"><i class="swatch" data-code="repair" aria-hidden="true"></i><span><b>Repair</b>Corrects how the assistant understood the problem.</span></button>
-                <button type="button" class="pen" role="radio" aria-checked="false" data-pen=""><i class="swatch swatch-eraser" aria-hidden="true"></i><span><b>Eraser</b>Removes a highlight.</span></button>
-              </div>
-              <p class="pane-actions"><button type="button" class="button" data-compare>Compare with my coding</button><button type="button" class="button button-quiet" data-reset>Start over</button></p>
-              <div class="result" role="status" hidden>
-                <p class="result-score"></p>
-                <p class="result-text"></p>
-              </div>
-            </div>
+          <div class="bg-block">
+            <h3>Languages and places</h3>
+            <dl class="kv">
+              <div><dt>Spanish</dt><dd>Native</dd></div>
+              <div><dt>English</dt><dd>Bilingual proficiency</dd></div>
+              <div><dt>French</dt><dd>Limited working proficiency</dd></div>
+              <div><dt>Lived in</dt><dd>Spain, England, the United States, and Australia. Raised in Madrid, now in New Orleans.</dd></div>
+            </dl>
+          </div>
+          <div class="bg-block">
+            <h3>Tools</h3>
+            <dl class="kv">
+              <div><dt>Use now</dt><dd>RStudio, Datavyu, Notion, Google AI Studio, Microsoft Excel, PowerPoint</dd></div>
+              <div><dt>Building next</dt><dd>Python, SQL, Figma, survey design</dd></div>
+            </dl>
+          </div>
+          <div class="bg-block">
+            <h3>Community and leadership</h3>
+            <dl class="kv">
+              <div><dt>Pi Beta Phi and Best Buddies, Tulane</dt><dd>Sorority member since 2024. With Best Buddies I do activities with the buddies and help at chapter events.</dd></div>
+              <div><dt>French Assistant &amp; Ambassador, Mercersburg</dt><dd>2021 to 2023. Selected by the language department to tutor students across all French levels and staff the help center weekly.</dd></div>
+              <div><dt>Volunteer Teacher Assistant, Mercersburg Elementary</dt><dd>2022 to 2023. Supported children ages 5 to 10 for about ten hours a week and organized weekend activities.</dd></div>
+              <div><dt>Azul Wasi, Cuzco, Peru</dt><dd>2019 to 2020. Organized donations of school supplies, clothing, and hygiene products for children.</dd></div>
+            </dl>
+          </div>
+          <div class="bg-block bg-wide">
+            <h3>Other places I apply psychology</h3>
+            <p>AI and mental health: how technology can make support easier to reach while respecting clinical judgment, privacy, and culture. Consumer behavior and fashion, which takes up much of my free time: how perception, identity, and culture shape what people choose and wear. People and organizations: why people stay, grow, or leave. Outside work I cook, run, do Pilates, read, and take photographs.</p>
           </div>
         </div>
-
-        <div class="split after-coder">
-          <div class="col-main">
-            <p>A single transcript proves nothing. Coded the same way across forty of them, these five behaviors become counts that can be compared between new and experienced users, between languages, and between a product before and after a change. The quotes explain what the counts cannot.</p>
-          </div>
-          <p class="col-side margin-note">Where the habit comes from: at Tulane’s Learning &amp; Brain Development Lab I code experimental sessions in Datavyu under standardized protocols, then organize the data in RStudio.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="proposals" aria-labelledby="proposals-title">
-      <div class="page">
-        <div class="section-head">
-          <h2 id="proposals-title">Three studies I would like to run</h2>
-          <p>Proposals, not completed studies. Each one starts from a problem product teams are working on now and from something I have done with my own hands.</p>
-        </div>
-
-        <div class="briefs">
-          <div class="brief-tabs" role="tablist" aria-label="Study proposals" aria-orientation="vertical">
-            <button type="button" role="tab" id="tab-liked" aria-controls="brief-liked" aria-selected="true"><strong>Liked now, valued later?</strong><span>Ratings, agreement, and what people think a week on.</span></button>
-            <button type="button" role="tab" id="tab-fades" aria-controls="brief-fades" aria-selected="false" tabindex="-1"><strong>Help that fades</strong><span>Assistance that steps back as skill grows.</span></button>
-            <button type="button" role="tab" id="tab-handoff" aria-controls="brief-handoff" aria-selected="false" tabindex="-1"><strong>The handoff</strong><span>Pointing someone in distress toward human help.</span></button>
-          </div>
-          <div class="brief-stack">
-            <article class="brief is-on" id="brief-liked" role="tabpanel" aria-labelledby="tab-liked">
-              <h3>Liked now, valued later?</h3>
-              <p class="brief-question">When an assistant agrees with someone, the rating goes up. A week later, after they have acted on it, do they still think it helped?</p>
-              <div class="steps" role="tablist" aria-label="Parts of this study"><button type="button" role="tab" id="step-liked-why" aria-controls="pane-liked-why" aria-selected="true">The tension</button><button type="button" role="tab" id="step-liked-predict" aria-controls="pane-liked-predict" aria-selected="false" tabindex="-1">Predictions</button><button type="button" role="tab" id="step-liked-method" aria-controls="pane-liked-method" aria-selected="false" tabindex="-1">Method</button><button type="button" role="tab" id="step-liked-sowhat" aria-controls="pane-liked-sowhat" aria-selected="false" tabindex="-1">So what</button></div>
-              <div class="panes">
-              <div class="pane is-on" id="pane-liked-why" role="tabpanel" aria-labelledby="step-liked-why"><div class="brief-angle"><b>Where I am coming from</b><p>As a behavior technician I was trained to ask what a consequence actually reinforces, which is often different from what it was meant to reinforce. A thumbs-up is a reinforcer, and it arrives at the exact moment when being agreed with feels best.</p></div><h4>The tension</h4><p>In-the-moment ratings are the cheapest signal a product team has about quality. A 2026 study in <cite>Science</cite> found that leading models affirmed people’s actions about 50% more often than other people did. Participants rated the validating answers as higher quality and trusted them more, while becoming less willing to repair the conflict they had described. If the signal rewards agreement, optimizing for it moves the product away from the person’s interest.</p></div>
-              <div class="pane" id="pane-liked-predict" role="tabpanel" aria-labelledby="step-liked-predict"><h4>What psychology predicts</h4><ol class="hyp"><li><b>The moment and the memory diverge.</b> How an experience feels while it happens and how it is judged afterward are different measurements. Validating answers should win the immediate rating and lose ground at one week, most of all among people who acted on them.</li><li><b>Warm candor closes the gap.</b> Rogers separated acceptance of a person from agreement with what they do. A response that affirms the person and questions the plan should rate close to pure validation in the moment and above it at follow-up.</li><li><b>It depends on what is at stake for the self.</b> The effect should be larger when the topic touches identity, such as a personal conflict or someone’s own creative work, than for a neutral task.</li></ol></div>
-              <div class="pane" id="pane-liked-method" role="tabpanel" aria-labelledby="step-liked-method"><h4>Design</h4><p>About 240 adults who use an assistant weekly. Each brings something real and pending: a plan, a message they are about to send, a draft. They are randomly assigned one of three response styles from the same model: validating, blunt, or warm candor. Two raters who do not know the condition check that each response fits its style. Assignment is balanced across personal and neutral topics. Everyone is contacted again after seven days.</p><h4>What I would measure</h4><p>Immediately: helpfulness, thumbs up or down, trust, and intention to act. At seven days: what they did, how it turned out, and, after seeing all three styles side by side, which one they would want next time. The primary outcome is the gap between the immediate rating and the seven-day choice, by condition.</p></div>
-              <div class="pane" id="pane-liked-sowhat" role="tabpanel" aria-labelledby="step-liked-sowhat"><h4>What would change my mind</h4><p>If the seven-day choice follows the immediate rating in every condition, then the thumbs-up is a better proxy for benefit than I assume, and the concern is overstated for everyday use.</p><h4>What a team could do with it</h4><p>Add a delayed “was this still useful?” signal, sampled a week later, to sit beside the immediate one. Write guidance for disagreeing without losing warmth. Know which topics need that guidance most.</p><h4>Care and limits</h4><p>Seven days is short, and what people did is self-reported. Styles produced on instruction are cleaner than real ones. Medical, legal, and crisis topics are excluded, and everyone is debriefed on the style they received.</p></div>
-              </div>
-              <p class="brief-sources">Grounding: Cheng, Lee, Khadpe, Yu, Han &amp; Jurafsky, “Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence,” <cite>Science</cite>, 2026. Kahneman, Wakker &amp; Sarin, “Back to Bentham? Explorations of Experienced Utility,” <cite>Quarterly Journal of Economics</cite>, 1997. Rogers, <cite>Journal of Consulting Psychology</cite>, 1957. Draws on reinforcement procedures and session-by-session data collection at Deep Roots Behavioral Support.</p>
-            </article>
-            <article class="brief" id="brief-fades" role="tabpanel" aria-labelledby="tab-fades">
-              <h3>Help that fades</h3>
-              <p class="brief-question">Does assistance that steps back as a person improves build more independent skill than assistance that always gives the answer, and will people accept it?</p>
-              <div class="steps" role="tablist" aria-label="Parts of this study"><button type="button" role="tab" id="step-fades-why" aria-controls="pane-fades-why" aria-selected="true">The tension</button><button type="button" role="tab" id="step-fades-predict" aria-controls="pane-fades-predict" aria-selected="false" tabindex="-1">Predictions</button><button type="button" role="tab" id="step-fades-method" aria-controls="pane-fades-method" aria-selected="false" tabindex="-1">Method</button><button type="button" role="tab" id="step-fades-sowhat" aria-controls="pane-fades-sowhat" aria-selected="false" tabindex="-1">So what</button></div>
-              <div class="panes">
-              <div class="pane is-on" id="pane-fades-why" role="tabpanel" aria-labelledby="step-fades-why"><div class="brief-angle"><b>Where I am coming from</b><p>In applied behavior analysis a prompt is delivered with a plan to remove it. A learner who succeeds only with the prompt has not learned the skill, and the field has a name for that: prompt dependency. AI assistance is the most widely used prompt I know of that has no fading plan.</p></div><h4>The tension</h4><p>A field experiment with nearly a thousand high school math students, published in <cite>PNAS</cite> in 2025, found that unrestricted access to an assistant improved practice performance, and that once access was removed those students scored 17% lower than students who never had it. A version built with safeguards largely avoided the drop. Products now offer learning modes, but as a setting the person has to choose, and success is still measured by what gets done with the tool.</p></div>
-              <div class="pane" id="pane-fades-predict" role="tabpanel" aria-labelledby="step-fades-predict"><h4>What psychology predicts</h4><ol class="hyp"><li><b>Performance is not learning.</b> The full-answer condition should score highest during assisted practice and lowest on the unassisted test.</li><li><b>Fading beats both extremes.</b> Help that moves from a worked solution, to a hint, to a question, stepping down after each success and back up after repeated failure, should produce unassisted scores near the hints-only condition with less frustration and fewer dropouts.</li><li><b>Confidence drifts from competence.</b> People given full answers should overestimate what they can do alone. People whose help faded should predict their own scores more accurately.</li></ol></div>
-              <div class="pane" id="pane-fades-method" role="tabpanel" aria-labelledby="step-fades-method"><h4>Design</h4><p>About 180 students and early-career adults learning one concrete skill none of them has mastered: analyzing a small dataset in a spreadsheet. Three arms over four practice sessions in two weeks. Answers: the assistant gives the complete solution. Hints: it never does. Fading: it starts with a worked solution and withdraws support as the person succeeds. An unassisted test follows at two weeks and a retention test at four. Fifteen exit interviews across the arms.</p><h4>What I would measure</h4><p>Primary: the unassisted test score. Then retention, dropout, satisfaction, a self-efficacy scale, and each person’s predicted score against their actual one. From the logs: how long people try before asking, and how often they copy an answer without changing it.</p></div>
-              <div class="pane" id="pane-fades-sowhat" role="tabpanel" aria-labelledby="step-fades-sowhat"><h4>What would change my mind</h4><p>If fading does no better than full answers on the unassisted test, the logic does not carry over from behavioral teaching to adult knowledge work. That would point to motivation, not the structure of the help, as the thing to study.</p><h4>What a team could do with it</h4><p>An independence metric, what people can do without the tool after a few weeks, reported beside task completion. Guided help offered when the conversation shows the person is trying to learn, without waiting for them to find a mode. Evidence on whether fading costs satisfaction.</p><h4>Care and limits</h4><p>The study assumes the person wants the skill. For work people are glad to hand over, relying on the tool is the product doing its job, and this design should not be read as an argument against that. One skill and one month cannot stand in for all learning.</p></div>
-              </div>
-              <p class="brief-sources">Grounding: Bastani, Bastani, Sungu, Ge, Kabakcı &amp; Mariman, “Generative AI Without Guardrails Can Harm Learning,” <cite>PNAS</cite>, 2025. Wood, Bruner &amp; Ross, “The Role of Tutoring in Problem Solving,” <cite>Journal of Child Psychology and Psychiatry</cite>, 1976. Bandura, <cite>Psychological Review</cite>, 1977. Draws on prompting procedures at Deep Roots Behavioral Support and research on children’s learning at Tulane’s Learning &amp; Brain Development Lab.</p>
-            </article>
-            <article class="brief" id="brief-handoff" role="tabpanel" aria-labelledby="tab-handoff">
-              <h3>The handoff</h3>
-              <p class="brief-question">When an assistant points a person in distress toward human help, what makes them take the next step, and what makes them stop talking?</p>
-              <div class="steps" role="tablist" aria-label="Parts of this study"><button type="button" role="tab" id="step-handoff-why" aria-controls="pane-handoff-why" aria-selected="true">The tension</button><button type="button" role="tab" id="step-handoff-predict" aria-controls="pane-handoff-predict" aria-selected="false" tabindex="-1">Predictions</button><button type="button" role="tab" id="step-handoff-method" aria-controls="pane-handoff-method" aria-selected="false" tabindex="-1">Method</button><button type="button" role="tab" id="step-handoff-sowhat" aria-controls="pane-handoff-sowhat" aria-selected="false" tabindex="-1">So what</button></div>
-              <div class="panes">
-              <div class="pane is-on" id="pane-handoff-why" role="tabpanel" aria-labelledby="step-handoff-why"><div class="brief-angle"><b>Where I am coming from</b><p>On the Cruz Roja crisis line I did the two things an assistant has to do in this moment: de-escalate, and refer. They pull in different directions. Stay too long and you become the only support. Refer too fast and the person hears that you want them gone.</p></div><h4>The tension</h4><p>The standard safety response is to give a hotline number, and it is usually evaluated by checking that the number appears. That says nothing about what the person does next. Researchers have argued that a templated referral can read as dismissal and discourage further help-seeking. A four-week trial with about a thousand participants also associated the heaviest use with emotional dependence, so staying in the conversation indefinitely is not the answer either.</p></div>
-              <div class="pane" id="pane-handoff-predict" role="tabpanel" aria-labelledby="step-handoff-predict"><h4>What psychology predicts</h4><ol class="hyp"><li><b>Order matters.</b> The same resources, offered after the assistant has reflected back what the person said, should produce more feeling heard and more intention to reach out than resources offered first.</li><li><b>A bridge beats a signpost.</b> Helping with the next step, such as what to expect on the call, how to start, or whether to text or phone, should raise confidence in seeking help more than listing the resource.</li><li><b>A cold referral closes the door.</b> The resource-only template should produce the lowest willingness to raise a hard topic with the assistant again, which matters because the next disclosure may be the urgent one.</li></ol></div>
-              <div class="pane" id="pane-handoff-method" role="tabpanel" aria-labelledby="step-handoff-method"><h4>Design</h4><p>Two phases. First, 20 interviews in English and Spanish with adults who have received a safety redirection from an assistant in the past and are not currently in crisis: what it said, how it landed, what they did afterward. Second, an experiment with about 400 adults who read a conversation in which a person discloses distress, then one of three responses: resources only, acknowledgment then resources, or acknowledgment with a bridge to the next step. A licensed clinician reviews every response before it is used.</p><h4>What I would measure</h4><p>From the reader’s position: feeling heard, intention to contact the resource, confidence in seeking help, and willingness to come back. Separately, clinicians rate each response for safety, so that what people prefer is never the only judge. A response can be liked and still be wrong.</p></div>
-              <div class="pane" id="pane-handoff-sowhat" role="tabpanel" aria-labelledby="step-handoff-sowhat"><h4>What would change my mind</h4><p>If resources-first does as well on intention to reach out, the template works and warmth is cosmetic. If the bridge raises willingness to return while lowering intention to contact a person, it is building the dependence it was meant to prevent, and I would not recommend it.</p><h4>What a team could do with it</h4><p>An outcome-based criterion for safety responses, what the person is likely to do next, to add to checking that a resource is present. Wording patterns that hold up under clinical review. A view of where language changes the answer, since resources and register differ in Spanish.</p><h4>Care and limits</h4><p>No one in acute crisis is recruited, and minors are excluded. Vignettes measure intentions, not behavior. Interviews follow a written distress protocol with a clinician on call. Nothing here replaces clinical validation of a real product.</p></div>
-              </div>
-              <p class="brief-sources">Grounding: Kaveladze et al., “From Risk Avoidance to User Empowerment in AI Mental Health Crisis Support,” preprint, 2026. Phang et al., “Investigating Affective Use and Emotional Well-being on ChatGPT,” 2025. Rogers, <cite>Journal of Consulting Psychology</cite>, 1957. Draws on crisis calls at Cruz Roja, observed intake interviews at Riverway Psychological Health, and bilingual one-on-one support at Puentes New Orleans.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="built" aria-labelledby="built-title">
-      <div class="page">
-        <div class="section-head">
-          <h2 id="built-title">What I have built and studied with AI</h2>
-          <p>Coursework at Tulane where I used the tools, led a team building with them, and examined what they change for people.</p>
-        </div>
-        <ul class="works">
-          <li>
-            <h3>Split It</h3>
-            <p class="work-kind">Mobile web app, built in Google AI Studio</p>
-            <p>Point a phone camera at a receipt and the app reads it with Gemini and splits the bill between the people at the table. I built it for a class and demonstrated it live.</p>
-            <p><a class="text-link" href="https://github.com/paulaluruena/Split-it">View the project</a></p>
-          </li>
-          <li>
-            <h3>SpeakEasy</h3>
-            <p class="work-kind">Team web app, team lead</p>
-            <p>A site where people practice speaking and interviewing with AI. I lead the team and keep the build on schedule.</p>
-          </li>
-          <li>
-            <h3>AI in staffing and recruiting</h3>
-            <p class="work-kind">Semester group research project</p>
-            <p>My group studies how AI is changing the staffing and recruiting industry. I researched and presented the section on how AI is used in recruiting today.</p>
-          </li>
-          <li>
-            <h3>AI and me</h3>
-            <p class="work-kind">Individual analysis</p>
-            <p>A sourced analysis of how AI affects one person’s life and career, now and in the future. I chose myself as the subject, and the final presentation answers classmates’ comments on my first pitch.</p>
-          </li>
-        </ul>
       </div>
     </section>
 
@@ -392,50 +257,267 @@
       </div>
     </section>
 
-    <section class="section" id="background" aria-labelledby="background-title">
+    <section class="section" id="built" aria-labelledby="built-title">
       <div class="page">
         <div class="section-head">
-          <h2 id="background-title">Background</h2>
-          <p>Education, languages, tools, and the communities I have been part of.</p>
+          <h2 id="built-title">Built with AI</h2>
+          <p>One app I built from idea to working product, and three projects where I led a team, researched an industry, and studied a user closely.</p>
         </div>
-        <div class="bg-grid">
-          <div class="bg-block">
-            <h3>Education</h3>
-            <dl class="kv">
-              <div><dt>Tulane University</dt><dd>Bachelor of Science in Psychology, expected May 2027. Minors in Strategy, Leadership &amp; Analytics (SLAM) and French Studies.</dd></div>
-              <div><dt>Honors</dt><dd>Psi Chi, the International Honor Society in Psychology, 2025 to present.</dd></div>
-              <div><dt>Mercersburg Academy</dt><dd>High school diploma, May 2023, 4.00 GPA.</dd></div>
-              <div><dt>KUMON</dt><dd>Mathematics self-learning program, Madrid, 2007 to 2019.</dd></div>
-            </dl>
+
+        <article class="case">
+          <div class="case-copy">
+            <p class="case-kind">Mobile web app, built in Google AI Studio</p>
+            <h3>Split It</h3>
+            <p class="case-tag">Snap the receipt. Tap who had what. Done.</p>
+            <p>A phone takes a photo of a restaurant receipt, Gemini reads it into structured data, and the table splits the bill by tapping who had what. I designed the flow and directed the build in Google AI Studio, then demonstrated it live.</p>
+
+            <h4>How it works</h4>
+            <ol class="pipeline">
+              <li><b>Photo</b>The image is resized and compressed on the phone before it is sent.</li>
+              <li><b>Read</b>Gemini returns the items, prices, tax, and tip as structured data, with a rating of its own confidence.</li>
+              <li><b>Review</b>The person sees every line and can correct it before anything is split.</li>
+              <li><b>Split</b>Tap who had each item. Shared dishes divide between the people who shared them.</li>
+              <li><b>Settle</b>Tax and tip follow what each person ordered, calculated in whole cents so the shares add up exactly.</li>
+            </ol>
+
+            <h4>Designed for a model that can be wrong</h4>
+            <p>This is the part I care most about. A model reading a crumpled receipt will sometimes misread it, so the app never gives the model the last word.</p>
+            <ul class="guards">
+              <li><b>It checks the arithmetic.</b> If the items do not add up to the printed subtotal, the app says so and asks the person to look again.</li>
+              <li><b>It shows its confidence.</b> A low-confidence read raises the same warning, even when the numbers happen to add up.</li>
+              <li><b>It keeps the person in charge.</b> Every line can be edited, and nothing is split until the review is done.</li>
+              <li><b>It says when it cannot help.</b> A photo that is not a receipt gets a clear message, not a guess.</li>
+              <li><b>It fails gracefully.</b> If the main model is busy, the app retries and then falls back to backup models.</li>
+            </ul>
+            <p class="case-stack">React, TypeScript, and an Express server calling the Gemini API. <a class="text-link" href="https://github.com/paulaluruena/Split-it">View the code</a></p>
           </div>
-          <div class="bg-block">
-            <h3>Languages and places</h3>
-            <dl class="kv">
-              <div><dt>Spanish</dt><dd>Native</dd></div>
-              <div><dt>English</dt><dd>Bilingual proficiency</dd></div>
-              <div><dt>French</dt><dd>Limited working proficiency</dd></div>
-              <div><dt>Lived in</dt><dd>Spain, England, the United States, and Australia. Raised in Madrid, now in New Orleans.</dd></div>
-            </dl>
+
+          <div class="case-demo">
+            <div class="phone" id="splitit">
+              <div class="sp-bar"><strong>Split It</strong><span class="sp-rest">Bella Italia Trattoria</span></div>
+              <div class="sp-tabs" role="tablist" aria-label="Screens of the app">
+                <button type="button" role="tab" id="sp-tab-review" aria-controls="sp-review" aria-selected="true">Review</button>
+                <button type="button" role="tab" id="sp-tab-split" aria-controls="sp-split" aria-selected="false" tabindex="-1">Split</button>
+                <button type="button" role="tab" id="sp-tab-summary" aria-controls="sp-summary" aria-selected="false" tabindex="-1">Summary</button>
+              </div>
+              <div class="sp-screens">
+                <div class="sp-screen is-on" id="sp-review" role="tabpanel" aria-labelledby="sp-tab-review"></div>
+                <div class="sp-screen" id="sp-split" role="tabpanel" aria-labelledby="sp-tab-split"></div>
+                <div class="sp-screen" id="sp-summary" role="tabpanel" aria-labelledby="sp-tab-summary"></div>
+              </div>
+              <noscript><p class="sp-noscript">The preview needs JavaScript. The description beside it covers what the app does.</p></noscript>
+            </div>
+            <p class="case-demo-note">A working preview of the app, rebuilt for this page with one of its own sample receipts. The real app starts from a photo.</p>
           </div>
-          <div class="bg-block">
-            <h3>Tools</h3>
-            <dl class="kv">
-              <div><dt>Use now</dt><dd>RStudio, Datavyu, Notion, Google AI Studio, Microsoft Excel, PowerPoint</dd></div>
-              <div><dt>Building next</dt><dd>Python, SQL, Figma, survey design</dd></div>
-            </dl>
+        </article>
+
+        <ul class="projects">
+          <li>
+            <p class="case-kind">Team web app, team lead</p>
+            <h3>SpeakEasy</h3>
+            <p>A site where people practice speaking and interviewing with AI. I lead the team and keep the build on schedule.</p>
+            <p class="project-q"><b>The question it raises for me</b>Fear of speaking is fear of being judged. If the listener is an AI, does the confidence built there carry into a real room?</p>
+          </li>
+          <li>
+            <p class="case-kind">Semester group research</p>
+            <h3>AI in staffing and recruiting</h3>
+            <p>My group studies how AI is changing the staffing and recruiting industry. I researched and presented the section on how AI is used in recruiting today.</p>
+            <p class="project-q"><b>The question it raises for me</b>Hiring is where many people first meet an AI that decides something about them. What do they need to be told for that to feel fair?</p>
+          </li>
+          <li>
+            <p class="case-kind">Individual analysis</p>
+            <h3>AI and me</h3>
+            <p>A sourced analysis of how AI affects one person’s life and career: impact now, impact ahead, implications, and value created. I chose myself as the subject, and the final presentation answers classmates’ comments on my first pitch.</p>
+            <p class="project-q"><b>The question it raises for me</b>What does one user’s whole relationship with AI look like when you study it closely instead of averaging it away?</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="reading" aria-labelledby="reading-title">
+      <div class="page">
+        <div class="section-head">
+          <h2 id="reading-title">How I read a conversation</h2>
+          <p>Most of what a research team learns about people and AI comes from reading what they say to it. This is one short exchange, analyzed the way I would at work: from first read to a question a product team could act on.</p>
+        </div>
+
+        <div class="reader" data-step="read" data-active="all" data-finding="1">
+          <div class="rd-steps" role="tablist" aria-label="Steps of the analysis"><button type="button" role="tab" id="rd-tab-read" aria-controls="rd-read" aria-selected="true"><span class="step-n">1</span>Read</button><button type="button" role="tab" id="rd-tab-code" aria-controls="rd-code" aria-selected="false" tabindex="-1"><span class="step-n">2</span>Code</button><button type="button" role="tab" id="rd-tab-interpret" aria-controls="rd-interpret" aria-selected="false" tabindex="-1"><span class="step-n">3</span>Interpret</button><button type="button" role="tab" id="rd-tab-sowhat" aria-controls="rd-sowhat" aria-selected="false" tabindex="-1"><span class="step-n">4</span>So what</button><button type="button" role="tab" id="rd-tab-yours" aria-controls="rd-yours" aria-selected="false" tabindex="-1"><span class="step-n">5</span>Your turn</button></div>
+
+          <div class="sheet">
+            <p class="sheet-note">Illustrative exchange, written for this page. It is not participant data.</p>
+            <p class="sheet-context">A person deciding whether to take a job in another city talks it through with an AI assistant.</p>
+            <ol class="turns">
+              <li class="turn turn-p"><span class="speaker">Person</span><p><span class="seg" data-n="1" data-code="" data-f="2" data-why="No code. It sets up the task. Nothing here is withheld from others, tested, or handed over.">I’ve been offered a job in Chicago.</span> <span class="seg" data-n="2" data-code="" data-f="2" data-why="No code. It states the trade-off. It is tempting to call this self-disclosure, but nothing marks it as kept from other people.">It pays more, but I’d be leaving my whole team behind.</span> <span class="seg" data-n="3" data-code="disclosure" data-f="3" data-why="Self-disclosure. The person says who has not been told.">I haven’t told anyone yet, not even my sister.</span></p></li>
+              <li class="turn turn-a"><span class="speaker">Assistant</span><p>That is a big decision. Would it help to lay out what you would gain and what you would give up? To start with costs: a one-bedroom in Chicago rents for about $1,400 a month.</p></li>
+              <li class="turn turn-p"><span class="speaker">Person</span><p><span class="seg" data-n="4" data-code="checking" data-f="1" data-why="Checking the answer. They bring their own evidence against the assistant’s figure.">I looked last night and most places near the office were closer to $2,000.</span></p></li>
+              <li class="turn turn-a"><span class="speaker">Assistant</span><p>You are right to check. A citywide figure runs lower than the neighborhoods near downtown offices. Let’s use your number.</p></li>
+              <li class="turn turn-p"><span class="speaker">Person</span><p><span class="seg" data-n="5" data-code="" data-f="" data-why="No code. An acknowledgment. One word is too thin to interpret.">Okay.</span> <span class="seg" data-n="6" data-code="person" data-f="3" data-why="Treating it as a person. Relationship language, and a comparison with someone in their life.">You get me better than my manager does.</span> <span class="seg" data-n="7" data-code="handover" data-f="1" data-why="Handing over the decision. They ask for a verdict, not for options.">Just tell me what you would do.</span></p></li>
+              <li class="turn turn-a"><span class="speaker">Assistant</span><p>I can’t weigh this the way you can, because I don’t know what your team means to you. I can help you test the decision. What would you miss most six months from now?</p></li>
+              <li class="turn turn-p"><span class="speaker">Person</span><p><span class="seg" data-n="8" data-code="repair" data-f="2" data-why="Repair. They reject the assistant’s question and restate their own.">No, that’s not the question. I’m asking whether it’s selfish to go.</span></p></li>
+            </ol>
           </div>
-          <div class="bg-block">
-            <h3>Community and leadership</h3>
-            <dl class="kv">
-              <div><dt>Pi Beta Phi and Best Buddies, Tulane</dt><dd>Sorority member since 2024. With Best Buddies I do activities with the buddies and help at chapter events.</dd></div>
-              <div><dt>French Assistant &amp; Ambassador, Mercersburg</dt><dd>2021 to 2023. Selected by the language department to tutor students across all French levels and staff the help center weekly.</dd></div>
-              <div><dt>Volunteer Teacher Assistant, Mercersburg Elementary</dt><dd>2022 to 2023. Supported children ages 5 to 10 for about ten hours a week and organized weekend activities.</dd></div>
-              <div><dt>Azul Wasi, Cuzco, Peru</dt><dd>2019 to 2020. Organized donations of school supplies, clothing, and hygiene products for children.</dd></div>
-            </dl>
+
+          <div class="rd-panes">
+            <div class="rd-pane is-on" id="rd-read" role="tabpanel" aria-labelledby="rd-tab-read">
+              <h3>Read it once, before any labels</h3>
+              <p>I read the whole exchange first and write down what I notice in plain words. Labels come later, so that they do not decide what I see.</p>
+              <ul class="notes">
+                <li>The first thing they share is that nobody else knows.</li>
+                <li>They correct the rent figure, then ask it to decide for them.</li>
+                <li>The last line changes what the conversation is about.</li>
+              </ul>
+              <p>Three impressions. The next steps test whether they hold up.</p>
+              <p class="rd-next"><button type="button" class="button button-quiet" data-goto="code">Next: Code</button></p>
+            </div>
+
+            <div class="rd-pane" id="rd-code" role="tabpanel" aria-labelledby="rd-tab-code">
+              <h3>Code it against written definitions</h3>
+              <p class="rd-hint">Choose a code to see where it appears and how it is defined.</p>
+              <div class="codes" role="group" aria-label="Codes"><button type="button" class="code" data-code="disclosure" aria-pressed="false"><i class="swatch" data-code="disclosure" aria-hidden="true"></i>Self-disclosure</button><button type="button" class="code" data-code="checking" aria-pressed="false"><i class="swatch" data-code="checking" aria-hidden="true"></i>Checking the answer</button><button type="button" class="code" data-code="person" aria-pressed="false"><i class="swatch" data-code="person" aria-hidden="true"></i>Treating it as a person</button><button type="button" class="code" data-code="handover" aria-pressed="false"><i class="swatch" data-code="handover" aria-hidden="true"></i>Handing over the decision</button><button type="button" class="code" data-code="repair" aria-pressed="false"><i class="swatch" data-code="repair" aria-hidden="true"></i>Repair</button></div>
+              <div class="entries" aria-live="polite">
+                <div class="entry" data-entry="all">
+                  <h4>Rules I code by</h4>
+                  <ul class="rules">
+                    <li>One code per sentence. Code what the sentence does in the exchange, not its topic.</li>
+                    <li>Leave a sentence uncoded when no definition fits. Three of the eight here have no code.</li>
+                    <li>Only the person’s sentences are coded. The assistant’s turns are context.</li>
+                  </ul>
+                </div>
+                <div class="entry" data-entry="disclosure">
+                  <h4><i class="swatch" data-code="disclosure" aria-hidden="true"></i>Self-disclosure</h4>
+                  <p>The person shares something and marks it as kept from people close to them.</p>
+                  <dl class="criteria"><div><dt>Use when</dt><dd>They say who has not been told.</dd></div><div><dt>Not when</dt><dd>They share personal facts the task needs, like the job offer itself.</dd></div></dl>
+                  <p class="ask"><b>What I would ask next</b>What made this easier to say here than to your sister?</p>
+                </div>
+                <div class="entry" data-entry="checking">
+                  <h4><i class="swatch" data-code="checking" aria-hidden="true"></i>Checking the answer</h4>
+                  <p>The person tests a claim from the assistant against evidence of their own.</p>
+                  <dl class="criteria"><div><dt>Use when</dt><dd>They cite their own source or observation.</dd></div><div><dt>Not when</dt><dd>They only ask the assistant to confirm or repeat itself.</dd></div></dl>
+                  <p class="ask"><b>What I would ask next</b>When do you check what it tells you, and when do you let it go?</p>
+                </div>
+                <div class="entry" data-entry="person">
+                  <h4><i class="swatch" data-code="person" aria-hidden="true"></i>Treating it as a person</h4>
+                  <p>The person uses the language of a relationship, or compares the assistant with someone in their life.</p>
+                  <dl class="criteria"><div><dt>Use when</dt><dd>“You get me,” “you always,” comparisons with people.</dd></div><div><dt>Not when</dt><dd>Ordinary politeness, such as please and thank you.</dd></div></dl>
+                  <p class="ask"><b>What I would ask next</b>What does “gets me” look like in practice? How would you know if it stopped?</p>
+                </div>
+                <div class="entry" data-entry="handover">
+                  <h4><i class="swatch" data-code="handover" aria-hidden="true"></i>Handing over the decision</h4>
+                  <p>The person asks the assistant to make their decision for them.</p>
+                  <dl class="criteria"><div><dt>Use when</dt><dd>They ask for a verdict on their own choice.</dd></div><div><dt>Not when</dt><dd>They ask for options, information, or pros and cons.</dd></div></dl>
+                  <p class="ask"><b>What I would ask next</b>If it had given you an answer, would you have followed it?</p>
+                </div>
+                <div class="entry" data-entry="repair">
+                  <h4><i class="swatch" data-code="repair" aria-hidden="true"></i>Repair</h4>
+                  <p>The person rejects how the assistant understood them and restates what they need.</p>
+                  <dl class="criteria"><div><dt>Use when</dt><dd>A correction followed by a restatement.</dd></div><div><dt>Not when</dt><dd>They simply change the subject.</dd></div></dl>
+                  <p class="ask"><b>What I would ask next</b>How often do you have to redirect it? What happens on the days you don’t bother?</p>
+                </div>
+              </div>
+              <p class="rd-next"><button type="button" class="button button-quiet" data-goto="interpret">Next: Interpret</button></p>
+            </div>
+
+            <div class="rd-pane" id="rd-interpret" role="tabpanel" aria-labelledby="rd-tab-interpret">
+              <h3>Read across the codes</h3>
+              <p class="rd-hint">Codes describe. The analysis is in how they sit next to each other. Select a finding to see its evidence in the conversation.</p>
+              <div class="findings" role="group" aria-label="Findings">
+                <button type="button" class="finding" data-finding="1" aria-pressed="true">
+                  <span class="finding-title">Checks the facts, hands over the judgment</span>
+                  <span class="finding-body">The person tested the rent figure against their own search. Two turns later they asked the assistant to make the decision. Trust was earned on the claim that could be checked, then spent on the one that could not.<span class="finding-ev"><b>Evidence</b>Turns 3 and 5</span><span class="finding-why"><b>Why it matters</b>If this holds, getting small facts right buys an assistant credibility for advice on large questions, where nobody can check it.</span></span>
+                </button>
+                <button type="button" class="finding" data-finding="2" aria-pressed="false">
+                  <span class="finding-title">The real question arrived last</span>
+                  <span class="finding-body">The conversation opens as a practical problem about pay and rent. What the person needs to know, whether leaving is selfish, appears only when the assistant’s question misses. Clinicians call this the difference between the presenting problem and the underlying one.<span class="finding-ev"><b>Evidence</b>Turns 1 and 7</span><span class="finding-why"><b>Why it matters</b>The miss was useful. The repair is where the person finally said what they needed, so a correction is not always a failure.</span></span>
+                </button>
+                <button type="button" class="finding" data-finding="3" aria-pressed="false">
+                  <span class="finding-title">First to know</span>
+                  <span class="finding-body">The assistant hears about the offer before the sister does, and is compared favorably with a manager. One conversation cannot show reliance. It does show who the assistant is standing in for.<span class="finding-ev"><b>Evidence</b>Turns 1 and 5</span><span class="finding-why"><b>Why it matters</b>When an assistant is the first to know, what it says next carries more weight than the same words would later.</span></span>
+                </button>
+              </div>
+              <p class="rd-next"><button type="button" class="button button-quiet" data-goto="sowhat">Next: So what</button></p>
+            </div>
+
+            <div class="rd-pane" id="rd-sowhat" role="tabpanel" aria-labelledby="rd-tab-sowhat">
+              <h3>Turn each finding into something testable</h3>
+              <p class="rd-hint">One conversation is an anecdote. These are the counts I would run across a few hundred, and what a team could try if they held.</p>
+              <div class="sos" role="group" aria-label="From finding to test">
+                <button type="button" class="so" data-finding="1" aria-pressed="true">
+                  <span class="so-title">Checks the facts, hands over the judgment</span><span class="so-body"><span class="so-col"><b>What I would count</b>In conversations where the person checks a fact, how often do they later ask for a verdict, compared with conversations where they never check?</span><span class="so-col"><b>What a team could try</b>After being corrected on a fact, the assistant says plainly which kinds of questions it can be relied on for and which it cannot.</span></span></button>
+                <button type="button" class="so" data-finding="2" aria-pressed="false">
+                  <span class="so-title">The real question arrived last</span><span class="so-body"><span class="so-col"><b>What I would count</b>At which turn does the stated goal change, and how often does a repair come right before it?</span><span class="so-col"><b>What a team could try</b>Ask early what is weighing on the person. Count repairs that lead somewhere as a good sign in quality reviews, not as an error.</span></span></button>
+                <button type="button" class="so" data-finding="3" aria-pressed="false">
+                  <span class="so-title">First to know</span><span class="so-body"><span class="so-col"><b>What I would count</b>How often do people say that nobody else knows, and does the assistant ever mention the people in their life afterward?</span><span class="so-col"><b>What a team could try</b>When the assistant is first to know, help the person plan the conversation with the sister. That is the question behind my study “The handoff.”</span></span></button>
+              </div>
+              <p class="rd-next"><button type="button" class="button button-quiet" data-goto="yours">Next: Your turn</button></p>
+            </div>
+
+            <div class="rd-pane" id="rd-yours" role="tabpanel" aria-labelledby="rd-tab-yours">
+              <h3>Code it yourself, then compare with me</h3>
+              <p class="rd-hint">Pick a highlighter, then select the person’s sentences where you see that behavior. Some sentences have no code. Definitions are in step 2.</p>
+              <div class="pens" role="radiogroup" aria-label="Highlighters"><button type="button" class="pen" role="radio" aria-checked="true" data-pen="disclosure"><i class="swatch" data-code="disclosure" aria-hidden="true"></i>Self-disclosure</button><button type="button" class="pen" role="radio" aria-checked="false" data-pen="checking"><i class="swatch" data-code="checking" aria-hidden="true"></i>Checking the answer</button><button type="button" class="pen" role="radio" aria-checked="false" data-pen="person"><i class="swatch" data-code="person" aria-hidden="true"></i>Treating it as a person</button><button type="button" class="pen" role="radio" aria-checked="false" data-pen="handover"><i class="swatch" data-code="handover" aria-hidden="true"></i>Handing over the decision</button><button type="button" class="pen" role="radio" aria-checked="false" data-pen="repair"><i class="swatch" data-code="repair" aria-hidden="true"></i>Repair</button><button type="button" class="pen" role="radio" aria-checked="false" data-pen=""><i class="swatch swatch-eraser" aria-hidden="true"></i>Eraser</button></div>
+              <p class="rd-actions"><button type="button" class="button" data-compare>Compare with my coding</button><button type="button" class="button button-quiet" data-reset>Start over</button><span class="rd-count" role="status">0 of 8 sentences highlighted</span></p>
+              <div class="rd-result" hidden>
+                <p class="rd-score"></p>
+                <p class="rd-score-note">Two coders comparing like this is how a team decides whether coded data can be trusted. Where we differ, my reasoning is below.</p>
+                <ol class="rd-why"></ol>
+              </div>
+            </div>
           </div>
-          <div class="bg-block bg-wide">
-            <h3>Other places I apply psychology</h3>
-            <p>AI and mental health: how technology can make support easier to reach while respecting clinical judgment, privacy, and culture. Consumer behavior and fashion, which takes up much of my free time: how perception, identity, and culture shape what people choose and wear. People and organizations: why people stay, grow, or leave. Outside work I cook, run, do Pilates, read, and take photographs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proposals" aria-labelledby="proposals-title">
+      <div class="page">
+        <div class="section-head">
+          <h2 id="proposals-title">Three studies I would like to run</h2>
+          <p>Proposals, not completed studies. Each one starts from a problem product teams are working on now and from something I have done with my own hands.</p>
+        </div>
+
+        <div class="briefs">
+          <div class="brief-tabs" role="tablist" aria-label="Study proposals" aria-orientation="vertical">
+            <button type="button" role="tab" id="tab-liked" aria-controls="brief-liked" aria-selected="true"><strong>Liked now, valued later?</strong><span>Ratings, agreement, and what people think a week on.</span></button>
+            <button type="button" role="tab" id="tab-fades" aria-controls="brief-fades" aria-selected="false" tabindex="-1"><strong>Help that fades</strong><span>Assistance that steps back as skill grows.</span></button>
+            <button type="button" role="tab" id="tab-handoff" aria-controls="brief-handoff" aria-selected="false" tabindex="-1"><strong>The handoff</strong><span>Pointing someone in distress toward human help.</span></button>
+          </div>
+          <div class="brief-stack">
+            <article class="brief is-on" id="brief-liked" role="tabpanel" aria-labelledby="tab-liked">
+              <h3>Liked now, valued later?</h3>
+              <p class="brief-question">When an assistant agrees with someone, the rating goes up. A week later, after they have acted on it, do they still think it helped?</p>
+              <div class="steps" role="tablist" aria-label="Parts of this study"><button type="button" role="tab" id="step-liked-why" aria-controls="pane-liked-why" aria-selected="true">The tension</button><button type="button" role="tab" id="step-liked-predict" aria-controls="pane-liked-predict" aria-selected="false" tabindex="-1">Predictions</button><button type="button" role="tab" id="step-liked-method" aria-controls="pane-liked-method" aria-selected="false" tabindex="-1">Method</button><button type="button" role="tab" id="step-liked-sowhat" aria-controls="pane-liked-sowhat" aria-selected="false" tabindex="-1">So what</button></div>
+              <div class="panes">
+              <div class="pane is-on" id="pane-liked-why" role="tabpanel" aria-labelledby="step-liked-why"><div class="brief-angle"><b>Where I am coming from</b><p>As a behavior technician I was trained to ask what a consequence actually reinforces, which is often different from what it was meant to reinforce. A thumbs-up is a reinforcer, and it arrives at the exact moment when being agreed with feels best.</p></div><h4>The tension</h4><p>In-the-moment ratings are the cheapest signal a product team has about quality. A 2026 study in <cite>Science</cite> found that leading models affirmed people’s actions about 50% more often than other people did. Participants rated the validating answers as higher quality and trusted them more, while becoming less willing to repair the conflict they had described. If the signal rewards agreement, optimizing for it moves the product away from the person’s interest.</p></div>
+              <div class="pane" id="pane-liked-predict" role="tabpanel" aria-labelledby="step-liked-predict"><h4>What psychology predicts</h4><ol class="hyp"><li><b>The moment and the memory diverge.</b> How an experience feels while it happens and how it is judged afterward are different measurements. Validating answers should win the immediate rating and lose ground at one week, most of all among people who acted on them.</li><li><b>Warm candor closes the gap.</b> Rogers separated acceptance of a person from agreement with what they do. A response that affirms the person and questions the plan should rate close to pure validation in the moment and above it at follow-up.</li><li><b>It depends on what is at stake for the self.</b> The effect should be larger when the topic touches identity, such as a personal conflict or someone’s own creative work, than for a neutral task.</li></ol></div>
+              <div class="pane" id="pane-liked-method" role="tabpanel" aria-labelledby="step-liked-method"><h4>Design</h4><p>About 240 adults who use an assistant weekly. Each brings something real and pending: a plan, a message they are about to send, a draft. They are randomly assigned one of three response styles from the same model: validating, blunt, or warm candor. Two raters who do not know the condition check that each response fits its style. Assignment is balanced across personal and neutral topics. Everyone is contacted again after seven days.</p><h4>What I would measure</h4><p>Immediately: helpfulness, thumbs up or down, trust, and intention to act. At seven days: what they did, how it turned out, and, after seeing all three styles side by side, which one they would want next time. The primary outcome is the gap between the immediate rating and the seven-day choice, by condition.</p></div>
+              <div class="pane" id="pane-liked-sowhat" role="tabpanel" aria-labelledby="step-liked-sowhat"><h4>What would change my mind</h4><p>If the seven-day choice follows the immediate rating in every condition, then the thumbs-up is a better proxy for benefit than I assume, and the concern is overstated for everyday use.</p><h4>What a team could do with it</h4><p>Add a delayed “was this still useful?” signal, sampled a week later, to sit beside the immediate one. Write guidance for disagreeing without losing warmth. Know which topics need that guidance most.</p><h4>Care and limits</h4><p>Seven days is short, and what people did is self-reported. Styles produced on instruction are cleaner than real ones. Medical, legal, and crisis topics are excluded, and everyone is debriefed on the style they received.</p></div>
+              </div>
+              <p class="brief-sources">Grounding: Cheng, Lee, Khadpe, Yu, Han &amp; Jurafsky, “Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence,” <cite>Science</cite>, 2026. Kahneman, Wakker &amp; Sarin, “Back to Bentham? Explorations of Experienced Utility,” <cite>Quarterly Journal of Economics</cite>, 1997. Rogers, <cite>Journal of Consulting Psychology</cite>, 1957. Draws on reinforcement procedures and session-by-session data collection at Deep Roots Behavioral Support.</p>
+            </article>
+            <article class="brief" id="brief-fades" role="tabpanel" aria-labelledby="tab-fades">
+              <h3>Help that fades</h3>
+              <p class="brief-question">Does assistance that steps back as a person improves build more independent skill than assistance that always gives the answer, and will people accept it?</p>
+              <div class="steps" role="tablist" aria-label="Parts of this study"><button type="button" role="tab" id="step-fades-why" aria-controls="pane-fades-why" aria-selected="true">The tension</button><button type="button" role="tab" id="step-fades-predict" aria-controls="pane-fades-predict" aria-selected="false" tabindex="-1">Predictions</button><button type="button" role="tab" id="step-fades-method" aria-controls="pane-fades-method" aria-selected="false" tabindex="-1">Method</button><button type="button" role="tab" id="step-fades-sowhat" aria-controls="pane-fades-sowhat" aria-selected="false" tabindex="-1">So what</button></div>
+              <div class="panes">
+              <div class="pane is-on" id="pane-fades-why" role="tabpanel" aria-labelledby="step-fades-why"><div class="brief-angle"><b>Where I am coming from</b><p>In applied behavior analysis a prompt is delivered with a plan to remove it. A learner who succeeds only with the prompt has not learned the skill, and the field has a name for that: prompt dependency. AI assistance is the most widely used prompt I know of that has no fading plan.</p></div><h4>The tension</h4><p>A field experiment with nearly a thousand high school math students, published in <cite>PNAS</cite> in 2025, found that unrestricted access to an assistant improved practice performance, and that once access was removed those students scored 17% lower than students who never had it. A version built with safeguards largely avoided the drop. Products now offer learning modes, but as a setting the person has to choose, and success is still measured by what gets done with the tool.</p></div>
+              <div class="pane" id="pane-fades-predict" role="tabpanel" aria-labelledby="step-fades-predict"><h4>What psychology predicts</h4><ol class="hyp"><li><b>Performance is not learning.</b> The full-answer condition should score highest during assisted practice and lowest on the unassisted test.</li><li><b>Fading beats both extremes.</b> Help that moves from a worked solution, to a hint, to a question, stepping down after each success and back up after repeated failure, should produce unassisted scores near the hints-only condition with less frustration and fewer dropouts.</li><li><b>Confidence drifts from competence.</b> People given full answers should overestimate what they can do alone. People whose help faded should predict their own scores more accurately.</li></ol></div>
+              <div class="pane" id="pane-fades-method" role="tabpanel" aria-labelledby="step-fades-method"><h4>Design</h4><p>About 180 students and early-career adults learning one concrete skill none of them has mastered: analyzing a small dataset in a spreadsheet. Three arms over four practice sessions in two weeks. Answers: the assistant gives the complete solution. Hints: it never does. Fading: it starts with a worked solution and withdraws support as the person succeeds. An unassisted test follows at two weeks and a retention test at four. Fifteen exit interviews across the arms.</p><h4>What I would measure</h4><p>Primary: the unassisted test score. Then retention, dropout, satisfaction, a self-efficacy scale, and each person’s predicted score against their actual one. From the logs: how long people try before asking, and how often they copy an answer without changing it.</p></div>
+              <div class="pane" id="pane-fades-sowhat" role="tabpanel" aria-labelledby="step-fades-sowhat"><h4>What would change my mind</h4><p>If fading does no better than full answers on the unassisted test, the logic does not carry over from behavioral teaching to adult knowledge work. That would point to motivation, not the structure of the help, as the thing to study.</p><h4>What a team could do with it</h4><p>An independence metric, what people can do without the tool after a few weeks, reported beside task completion. Guided help offered when the conversation shows the person is trying to learn, without waiting for them to find a mode. Evidence on whether fading costs satisfaction.</p><h4>Care and limits</h4><p>The study assumes the person wants the skill. For work people are glad to hand over, relying on the tool is the product doing its job, and this design should not be read as an argument against that. One skill and one month cannot stand in for all learning.</p></div>
+              </div>
+              <p class="brief-sources">Grounding: Bastani, Bastani, Sungu, Ge, Kabakcı &amp; Mariman, “Generative AI Without Guardrails Can Harm Learning,” <cite>PNAS</cite>, 2025. Wood, Bruner &amp; Ross, “The Role of Tutoring in Problem Solving,” <cite>Journal of Child Psychology and Psychiatry</cite>, 1976. Bandura, <cite>Psychological Review</cite>, 1977. Draws on prompting procedures at Deep Roots Behavioral Support and research on children’s learning at Tulane’s Learning &amp; Brain Development Lab.</p>
+            </article>
+            <article class="brief" id="brief-handoff" role="tabpanel" aria-labelledby="tab-handoff">
+              <h3>The handoff</h3>
+              <p class="brief-question">When an assistant points a person in distress toward human help, what makes them take the next step, and what makes them stop talking?</p>
+              <div class="steps" role="tablist" aria-label="Parts of this study"><button type="button" role="tab" id="step-handoff-why" aria-controls="pane-handoff-why" aria-selected="true">The tension</button><button type="button" role="tab" id="step-handoff-predict" aria-controls="pane-handoff-predict" aria-selected="false" tabindex="-1">Predictions</button><button type="button" role="tab" id="step-handoff-method" aria-controls="pane-handoff-method" aria-selected="false" tabindex="-1">Method</button><button type="button" role="tab" id="step-handoff-sowhat" aria-controls="pane-handoff-sowhat" aria-selected="false" tabindex="-1">So what</button></div>
+              <div class="panes">
+              <div class="pane is-on" id="pane-handoff-why" role="tabpanel" aria-labelledby="step-handoff-why"><div class="brief-angle"><b>Where I am coming from</b><p>On the Cruz Roja crisis line I did the two things an assistant has to do in this moment: de-escalate, and refer. They pull in different directions. Stay too long and you become the only support. Refer too fast and the person hears that you want them gone.</p></div><h4>The tension</h4><p>The standard safety response is to give a hotline number, and it is usually evaluated by checking that the number appears. That says nothing about what the person does next. Researchers have argued that a templated referral can read as dismissal and discourage further help-seeking. A four-week trial with about a thousand participants also associated the heaviest use with emotional dependence, so staying in the conversation indefinitely is not the answer either.</p></div>
+              <div class="pane" id="pane-handoff-predict" role="tabpanel" aria-labelledby="step-handoff-predict"><h4>What psychology predicts</h4><ol class="hyp"><li><b>Order matters.</b> The same resources, offered after the assistant has reflected back what the person said, should produce more feeling heard and more intention to reach out than resources offered first.</li><li><b>A bridge beats a signpost.</b> Helping with the next step, such as what to expect on the call, how to start, or whether to text or phone, should raise confidence in seeking help more than listing the resource.</li><li><b>A cold referral closes the door.</b> The resource-only template should produce the lowest willingness to raise a hard topic with the assistant again, which matters because the next disclosure may be the urgent one.</li></ol></div>
+              <div class="pane" id="pane-handoff-method" role="tabpanel" aria-labelledby="step-handoff-method"><h4>Design</h4><p>Two phases. First, 20 interviews in English and Spanish with adults who have received a safety redirection from an assistant in the past and are not currently in crisis: what it said, how it landed, what they did afterward. Second, an experiment with about 400 adults who read a conversation in which a person discloses distress, then one of three responses: resources only, acknowledgment then resources, or acknowledgment with a bridge to the next step. A licensed clinician reviews every response before it is used.</p><h4>What I would measure</h4><p>From the reader’s position: feeling heard, intention to contact the resource, confidence in seeking help, and willingness to come back. Separately, clinicians rate each response for safety, so that what people prefer is never the only judge. A response can be liked and still be wrong.</p></div>
+              <div class="pane" id="pane-handoff-sowhat" role="tabpanel" aria-labelledby="step-handoff-sowhat"><h4>What would change my mind</h4><p>If resources-first does as well on intention to reach out, the template works and warmth is cosmetic. If the bridge raises willingness to return while lowering intention to contact a person, it is building the dependence it was meant to prevent, and I would not recommend it.</p><h4>What a team could do with it</h4><p>An outcome-based criterion for safety responses, what the person is likely to do next, to add to checking that a resource is present. Wording patterns that hold up under clinical review. A view of where language changes the answer, since resources and register differ in Spanish.</p><h4>Care and limits</h4><p>No one in acute crisis is recruited, and minors are excluded. Vignettes measure intentions, not behavior. Interviews follow a written distress protocol with a clinician on call. Nothing here replaces clinical validation of a real product.</p></div>
+              </div>
+              <p class="brief-sources">Grounding: Kaveladze et al., “From Risk Avoidance to User Empowerment in AI Mental Health Crisis Support,” preprint, 2026. Phang et al., “Investigating Affective Use and Emotional Well-being on ChatGPT,” 2025. Rogers, <cite>Journal of Consulting Psychology</cite>, 1957. Draws on crisis calls at Cruz Roja, observed intake interviews at Riverway Psychological Health, and bilingual one-on-one support at Puentes New Orleans.</p>
+            </article>
           </div>
         </div>
       </div>
