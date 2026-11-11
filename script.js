@@ -155,35 +155,44 @@ if (coder) {
   });
 }
 
-// Study proposals: tabs with arrow-key support
-const tablist = document.querySelector(".brief-tabs");
-if (tablist) {
-  const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
-  const select = (tab, focus) => {
-    tabs.forEach((t) => {
-      const on = t === tab;
-      t.setAttribute("aria-selected", String(on));
-      t.tabIndex = on ? 0 : -1;
-      document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+// Study proposals: three studies, four parts each, all in one viewer.
+// Switching study keeps the part you were reading.
+const viewer = document.querySelector(".briefs");
+if (viewer) {
+  const setup = (tablist, onSelect) => {
+    const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+    const panels = tabs.map((t) => document.getElementById(t.getAttribute("aria-controls")));
+    const select = (index, focus) => {
+      tabs.forEach((t, i) => {
+        const on = i === index;
+        t.setAttribute("aria-selected", String(on));
+        t.tabIndex = on ? 0 : -1;
+        panels[i].classList.toggle("is-on", on);
+        panels[i].inert = !on;
+      });
+      if (focus) tabs[index].focus();
+      if (onSelect) onSelect(index);
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener("click", () => select(i, false));
+      tab.addEventListener("keydown", (e) => {
+        const last = tabs.length - 1;
+        const to = { ArrowRight: i === last ? 0 : i + 1, ArrowDown: i === last ? 0 : i + 1, ArrowLeft: i === 0 ? last : i - 1, ArrowUp: i === 0 ? last : i - 1, Home: 0, End: last }[e.key];
+        if (to === undefined) return;
+        e.preventDefault();
+        select(to, true);
+      });
     });
-    if (focus) tab.focus();
+    return select;
   };
-  tabs.forEach((tab, i) => {
-    tab.addEventListener("click", () => select(tab, false));
-    tab.addEventListener("keydown", (e) => {
-      const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
-      if (step) {
-        e.preventDefault();
-        select(tabs[(i + step + tabs.length) % tabs.length], true);
-      } else if (e.key === "Home") {
-        e.preventDefault();
-        select(tabs[0], true);
-      } else if (e.key === "End") {
-        e.preventDefault();
-        select(tabs[tabs.length - 1], true);
-      }
-    });
+  let part = 0;
+  const partSelectors = Array.from(viewer.querySelectorAll(".steps")).map((list) => setup(list, (i) => (part = i)));
+  const selectStudy = setup(viewer.querySelector(".brief-tabs"), (i) => {
+    const keep = part;
+    partSelectors[i](keep, false);
   });
+  partSelectors.forEach((select) => select(0, false));
+  selectStudy(0, false);
 }
 
 // Copy email

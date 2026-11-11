@@ -21,7 +21,7 @@ Professional facts come from Paula's résumé. Clinical observation is described
 - `index.html` — portfolio page
 - `story.html` — "Why psychology"
 - `styles.css` — design: a relative of the other portfolios (Bodoni Moda and Hanken Grotesk, the same paper, ink and wine, a side rail with live clocks), plus the five highlighter colors of the codebook
-- `script.js` — codebook highlighting, the code-it-yourself comparison, proposal tabs, live clocks, section tracking in the top bar, copy-email button, reading progress
+- `script.js` — codebook highlighting, the code-it-yourself comparison, the study viewer (three studies, four parts each, in one fixed-height panel), live clocks, section tracking in the top bar, copy-email button, reading progress
 - `assets/` — portrait, résumé, and local fonts with their licenses
 
 No build step. Open `index.html` in a browser, or publish from **main → / (root)** with GitHub Pages. The content stays readable without JavaScript, and motion is reduced for people who ask for that.

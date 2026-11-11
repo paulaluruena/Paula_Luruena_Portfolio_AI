@@ -306,34 +306,56 @@ html:not(.js) .codes, html:not(.js) .mode, html:not(.js) .pane-yours, html:not(.
 
 .after-coder { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
 
-/* ---------- Study proposals ---------- */
-.brief-tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
-html:not(.js) .brief-tabs { display: none; }
-html:not(.js) .brief[hidden] { display: block !important; }
-html:not(.js) .brief + .brief { margin-top: 1.5rem; }
+/* ---------- Study proposals: one compact viewer ---------- */
+.briefs { display: grid; gap: 1.25rem; align-items: start; }
+.brief-tabs { display: grid; gap: 0.5rem; }
 .brief-tabs button {
-  font-family: var(--display); font-style: italic; font-size: 1.1875rem; line-height: 1.2; text-align: left;
-  padding: 0.75rem 1.25rem; background: transparent; border: 1.5px solid var(--rule); border-radius: 999px; cursor: pointer;
-  transition: border-color 0.2s, background-color 0.2s, color 0.2s, transform 0.2s var(--ease);
+  display: grid; gap: 0.2rem; text-align: left; padding: 1rem 1.15rem; cursor: pointer;
+  background: transparent; border: 1px solid var(--rule); border-radius: 16px;
+  transition: background-color 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease), transform 0.35s var(--ease);
 }
-.brief-tabs button:hover { border-color: var(--ink); transform: translateY(-2px); }
-.brief-tabs button[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
-.brief { background: var(--sheet); border: 1px solid var(--rule); border-radius: 20px; padding: clamp(1.5rem, 4vw, 3.25rem); box-shadow: 0 24px 50px -38px rgba(24, 22, 27, 0.4); }
-.js .brief:not([hidden]) { animation: rise 0.4s var(--ease); }
-.brief h3 { font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.1; letter-spacing: -0.015em; }
-.brief-question { font-family: var(--display); font-style: italic; font-size: 1.375rem; line-height: 1.4; max-width: 44rem; margin-top: 0.75rem; color: var(--accent); }
-.brief-angle { margin-top: 1.5rem; max-width: 46rem; padding: 1rem 1.25rem; border-radius: 12px; background: var(--blush); }
-.brief-angle b { display: block; font-size: 0.8125rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem; }
-.brief-grid { margin-top: 2rem; border-top: 1.5px solid var(--ink); }
-.hyp { list-style: none; padding: 0; display: grid; gap: 0.75rem; counter-reset: h; }
+.brief-tabs strong { font-family: var(--display); font-weight: 500; font-size: 1.375rem; line-height: 1.15; letter-spacing: -0.01em; }
+.brief-tabs span { font-size: 0.9rem; line-height: 1.4; color: var(--muted); }
+.brief-tabs button:hover { border-color: var(--ink); }
+.brief-tabs button[aria-selected="true"] { background: var(--sheet); border-color: transparent; box-shadow: inset 3px 0 0 var(--accent), 0 14px 30px -22px rgba(24, 22, 27, 0.5); }
+
+/* The three studies, and the four parts of each, are stacked in one grid cell.
+   The viewer takes the height of the tallest one, so nothing jumps when you switch. */
+.brief-stack, .panes { display: grid; }
+.brief-stack { background: var(--sheet); border: 1px solid var(--rule); border-radius: 20px; box-shadow: 0 24px 50px -38px rgba(24, 22, 27, 0.4); overflow: hidden; }
+.brief { grid-area: 1 / 1; padding: clamp(1.4rem, 3vw, 2.5rem); display: grid; grid-template-rows: auto auto auto 1fr auto; font-size: 1rem; line-height: 1.6; }
+.pane { grid-area: 1 / 1; }
+.js .brief, .js .pane { visibility: hidden; opacity: 0; transform: translateY(8px); transition: opacity 0.4s var(--ease), transform 0.4s var(--ease), visibility 0s linear 0.4s; }
+.js .brief.is-on, .js .pane.is-on { visibility: visible; opacity: 1; transform: none; transition-delay: 0s; }
+html:not(.js) .brief-stack { gap: 0; }
+html:not(.js) .brief, html:not(.js) .pane { grid-area: auto; }
+html:not(.js) .brief-tabs, html:not(.js) .steps { display: none; }
+
+.brief h3 { font-size: clamp(1.75rem, 2.8vw, 2.4rem); line-height: 1.05; letter-spacing: -0.02em; }
+.brief-question { font-family: var(--display); font-style: italic; font-size: clamp(1.1rem, 1.5vw, 1.25rem); line-height: 1.4; color: var(--accent); margin-top: 0.6rem; max-width: 44rem; }
+.steps { display: inline-flex; flex-wrap: wrap; gap: 4px; justify-self: start; padding: 4px; margin-top: 1.25rem; border-radius: 999px; background: var(--mist); }
+.steps button { border: 0; background: transparent; padding: 0.5rem 1rem; border-radius: 999px; font-size: 0.9rem; font-weight: 600; color: var(--muted); cursor: pointer; transition: background-color 0.3s var(--ease), color 0.3s var(--ease); }
+.steps button:hover { color: var(--ink); }
+.steps button[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+.panes { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); align-items: start; }
+.pane { max-width: 48rem; }
+.pane h4 { font-size: 0.8125rem; font-weight: 700; color: var(--accent); margin-bottom: 0.3rem; }
+.pane p + h4 { margin-top: 1.1rem; }
+.brief-angle { padding: 0.9rem 1.1rem; border-radius: 12px; background: var(--blush); margin-bottom: 1.1rem; }
+.brief-angle b { display: block; font-size: 0.8125rem; font-weight: 700; color: var(--accent); margin-bottom: 0.2rem; }
+.hyp { list-style: none; padding: 0; display: grid; gap: 0.9rem; counter-reset: h; }
 .hyp li { counter-increment: h; padding-left: 2.25rem; position: relative; }
 .hyp li::before { content: "H" counter(h); position: absolute; left: 0; top: 0.15em; font-size: 0.8125rem; font-weight: 700; color: var(--accent); }
-.hyp b { font-weight: 700; }
-.brief-grid > div { display: grid; gap: 0.25rem 2rem; padding-block: 1rem; border-bottom: 1px solid var(--rule); }
-@media (min-width: 46rem) { .brief-grid > div { grid-template-columns: 12rem minmax(0, 40rem); } }
-.brief-grid dt { font-weight: 700; }
-.brief-sources, .brief-from { font-size: 0.9375rem; line-height: 1.5; color: var(--muted); max-width: 52rem; margin-top: 1.25rem; }
-.brief-from { color: var(--ink); }
+.brief-sources { font-size: 0.8125rem; line-height: 1.5; color: var(--muted); margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--rule); max-width: none; }
+
+@media (min-width: 62rem) {
+  .briefs { grid-template-columns: 17rem minmax(0, 1fr); gap: 1.5rem; }
+  .brief-tabs { position: sticky; top: 2rem; }
+}
+@media (max-width: 61.99rem) {
+  .brief-tabs { grid-auto-flow: column; grid-auto-columns: minmax(13.5rem, 1fr); overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .brief-tabs::-webkit-scrollbar { display: none; }
+}
 
 /* ---------- Built with AI ---------- */
 .works { border-top: 1.5px solid var(--ink); }
@@ -452,7 +474,7 @@ html:not(.js) .brief + .brief { margin-top: 1.5rem; }
   .sheet, .sheet::before { transform: none; }
 }
 @media print {
-  .top, .actions, .codes, .mode, .pane-yours, .brief-tabs, .read-progress { display: none; }
-  .brief[hidden] { display: block !important; }
+  .top, .actions, .codes, .mode, .pane-yours, .brief-tabs, .steps, .read-progress { display: none; }
+  .brief, .pane { grid-area: auto !important; visibility: visible !important; opacity: 1 !important; transform: none !important; }
   .contact, .footer { background: none; color: var(--ink); }
 }
